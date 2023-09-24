@@ -1,27 +1,23 @@
 import './index.scss'
 import handsomeMan from '../../assets/images/handsomeMan.jpg';
+import longHandsomeMan from '../../assets/images/longHandsomeMan.jpg';
+import PageDescription from './PageDescription';
 
 const HomeDetails = () => {
     return (
         <div>
-            <img className="ProfilePic" src={handsomeMan} alt="Michael Koch" />
-            <h1 className="PageHeader">Hello</h1>
-            
-            <p className="PageDescription">
-                My name is Michael Koch, welcome to my portfolio page!
-                <br /><br /> 
-                I am a software developer with a passion for solving business problems with software. 
-                In the about section, you can see my work experience, projects that I have worked 
-                on, and for the technical people you can see the tech stack that I am best with. 
-                <br /><br />
-                If you want me to help you build excellent software or if you just want to say hi,
-                please come to the contact page and send me a message. I look forward to hearing from you!
-                <br /><br />
-                Codebase for this website can be found <a href="https://github.com/mikekochh/portfolio" target='_blank' rel="noreferrer">here</a>
-            </p>
+            <img src={handsomeMan} alt="Michael Koch" className="ProfilePic max-md:hidden" />
+            <img src={longHandsomeMan} alt="Michael Koch" className="ProfilePicMobile md:hidden" />
+            <h1 className="PageHeader max-md:hidden">Hello</h1>        
+            <h1 className="PageHeaderMobile md:hidden">Hello</h1>      
+            <div className="PageDescription max-md:hidden md:PageDescriptionMobile">
+                <PageDescription />
+            </div>
+            <div className="md:hidden PageDescriptionMobile font-bold">
+                <PageDescription />
+            </div>
         </div>
     )
-
 }
 
 export default HomeDetails;

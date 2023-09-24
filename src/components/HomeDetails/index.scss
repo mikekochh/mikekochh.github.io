@@ -1,8 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .PageHeader {
     font-size: 96px;
     color: white;
     font-family: monospace;
     padding-left: 100px;
+}
+
+.PageHeaderMobile {
+    font-size: 96px;
+    color: white;
+    font-family: monospace;
+    padding-left: 60px;
+    text-align: center;
 }
 
 .PageDescription {
@@ -13,9 +25,26 @@
     max-width: 61%;
 }
 
+.PageDescriptionMobile {
+    font-size: 24px;
+    color: white;
+    font-family: monospace;
+    padding-left: 80px;
+    max-width: 95%;
+}
+
 .ProfilePic {
     float: right;
     max-width: 30%;
     margin-right: 30px;
     border-radius: 10%;
+    margin-top: 30px;
+}
+
+.ProfilePicMobile {
+    border-radius: 8%;
+    margin-top: 20px;
+    margin-left: 20%;
+    flex: auto;
+    height: 144px;
 }
