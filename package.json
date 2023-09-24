@@ -28,7 +28,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "git": "git add . && git commit -m ",
-    "postgit": "git push -all"
+    "postgit": "git push --all"
   },
   "eslintConfig": {
     "extends": [
