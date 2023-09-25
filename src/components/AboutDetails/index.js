@@ -1,10 +1,10 @@
 import './index.scss'
 import { JPMorganDetails, CCLRDetails, MaxetaDetails } from './CompanyDetails';
+import { useEffect } from 'react';
 
 const JobDetails = ({companyName, timeFrame, companyID}) => {
 
     const companyDetail = (companyID) => {
-        console.log("Company ID: " + companyID);
         switch(companyID) {
             case 1:
                 return <JPMorganDetails />;
@@ -19,8 +19,8 @@ const JobDetails = ({companyName, timeFrame, companyID}) => {
 
     return (        
         <div>
-            <p className="text-5xl mt-10">{companyName}</p>
-            <p className="text-4xl mt-5">{timeFrame}</p>
+            <p className="text-5xl mt-10 preload delayedItem">{companyName}</p>
+            <p className="text-4xl mt-5 preload delayedItem">{timeFrame}</p>
             <div>
                 {companyDetail(companyID)}
             </div>
@@ -32,23 +32,36 @@ const JobDetails = ({companyName, timeFrame, companyID}) => {
 
 const AboutDetails = () => {
 
-    console.log("JP Morgan Details: " + JPMorganDetails);
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('postload');
+                    entry.target.classList.remove('preload');
+                } else {
+                    entry.target.classList.remove('postload');
+                }
+            });
+         });
 
-    console.log(JPMorganDetails);
+         const hiddenElements = document.querySelectorAll('.preload');
+        hiddenElements.forEach((element) => observer.observe(element));
+    }, []);
+
     return (
-        <div className="ml-40 font-mono font-bold text-white mb-100">
-            <h1 className="mt-40 text-9xl text-center">About Me</h1>
-            <p className="text-7xl mt-10">Work Experience</p>
+        <div className="ml-40 font-mono font-bold text-white mb-100 about">
+            <h1 className="mt-40 text-9xl text-center preload delayedItem">About Me</h1>
+            <p className="text-7xl mt-10 preload delayedItem">Work Experience</p>
             <JobDetails companyName="JP Morgan & Chase" timeFrame="March 2023 - Present" companyID={1} />
             <br/>
             <br/>
             <JobDetails companyName="Center City Legal & Reporting, Inc." timeFrame="May 2021 - March 2023" companyID={2} />
             <br/>
             <br/>
-            <JobDetails companyName="Maxeta Technologies, Inc." timeFrame="May 2021 - March 2023" companyID={3} />
+            <JobDetails companyName="Maxeta Technologies, Inc." timeFrame="June 2020 - August 2020" companyID={3} />
             <br/>
             <br/>
-            <h1 className="text-7xl mt-10">Projects</h1>
+            <h1 className="text-7xl mt-10 delayedItem">Projects</h1>
         </div>
     )
 }
