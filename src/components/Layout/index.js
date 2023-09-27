@@ -1,15 +1,23 @@
 import Sidebar from '../Sidebar';
 import HomeDetails from '../HomeDetails';
 import AboutDetails from '../AboutDetails';
+import { ThemeContext } from '../../context/theme-context';
+import { useState } from 'react';
+import '../../styles/theme-variables.scss'
 
 const Layout = () => {
 
+    const [theme, setTheme] = useState('light');
+
     return (
-        <div>
-            <Sidebar />
-            <HomeDetails />
-            <AboutDetails />
-        </div>
+        <ThemeContext.Provider value={{ theme, setTheme }}>
+            <div className={`theme-${theme}`}>
+                <Sidebar theme={theme} setTheme={setTheme}/>
+                <HomeDetails />
+                <AboutDetails />
+            </div>
+        </ThemeContext.Provider>
+
     );
 }
 

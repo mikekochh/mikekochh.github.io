@@ -1,6 +1,9 @@
+import PortfolioVideo from '../../assets/videos/Portfolio-Project-Demo-1.mp4';
+import EstateVideo from '../../assets/videos/Demo-Desktop-Estate.mp4';
 import './index.scss'
 import { JPMorganDetails, CCLRDetails, MaxetaDetails } from './CompanyDetails';
 import { useEffect } from 'react';
+import VideoPlayer from '../VideoPlayer';
 
 const JobDetails = ({companyName, timeFrame, companyID}) => {
 
@@ -61,7 +64,9 @@ const AboutDetails = () => {
             <JobDetails companyName="Maxeta Technologies, Inc." timeFrame="June 2020 - August 2020" companyID={3} />
             <br/>
             <br/>
-            <h1 className="text-7xl mt-10 delayedItem">Projects</h1>
+            <h1 className="text-7xl mt-10 delayedItem">Projects</h1><br />
+            <div><VideoPlayer videoTitle="Project 1" videoSubtitle="Portfolio Project" video={PortfolioVideo}/></div><br />
+            <div><VideoPlayer videoTitle="Project 2" videoSubtitle="NFT Real Estate Application" video={EstateVideo}/></div><br />
         </div>
     )
 }

@@ -4,10 +4,10 @@ import { Link, NavLink } from 'react-router-dom';
 import blackLogo from '../../assets/images/blackLogo.jpg';
 import highlightedLogo from '../../assets/images/highlightedLogo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faHome, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faHome, faMoon, faS, faSun, faUser } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 
-const Sidebar = () => {
+const Sidebar = ({ theme, setTheme }) => {
 
     const [logo, setLogo] = useState(blackLogo);
     const [activeLink, setActiveLink] = useState('home');
@@ -22,21 +22,18 @@ const Sidebar = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            console.log("handleScroll");
             const homeElement = document.querySelector('.home');
             const aboutElement = document.querySelector('.about');
             const contactElement = document.querySelector('.contact');
 
             if (homeElement && window.scrollY < homeElement.offsetTop + homeElement.offsetHeight) {
-                console.log('home section');
                 setActiveLink('home');
             }
             else if (aboutElement && window.scrollY >= aboutElement.offsetTop && window.scrollY < aboutElement.offsetTop + aboutElement.offsetHeight) {
-                console.log('about section');
+                console.log("Were here?");
                 setActiveLink('about');
             }
             else if (contactElement && window.scrollY >= contactElement.offsetTop && window.scrollY < contactElement.offsetTop + contactElement.offsetHeight) {
-                console.log('contact section');
                 setActiveLink('contact');
             }
         }
@@ -49,10 +46,18 @@ const Sidebar = () => {
     }, []);
 
     const handleIconClick = (className) => () => { 
+        console.log("handleIconClick");
         const targetElement = document.querySelector(`.${className}`);
         if (targetElement) {
             targetElement.scrollIntoView({ behavior: 'smooth' });
-            setActiveLink(className);
+            let isScrolling;
+            window.addEventListener('scroll', () => {
+                clearTimeout(isScrolling);
+
+                isScrolling = setTimeout(() => {
+                    setActiveLink(className);
+                }, 1000); 
+            });
         }
     }
 
@@ -89,6 +94,14 @@ const Sidebar = () => {
                     </a>
                 </li>
             </ul>
+            <div className="flex justify-center mt-2" >
+                <input type="checkbox" className="checkbox" id="checkbox" onChange={() => setTheme(theme === 'light' ? 'dark' : 'light')} />
+                <label htmlFor="checkbox" className="flexBetween w-16 h-8 bg-black rounded-2xl p-1 relative label cursor-pointer">
+                    <FontAwesomeIcon icon={faSun} className="fa-sun" />
+                    <FontAwesomeIcon icon={faMoon} className="fa-moon" />
+                    <div className="w-6 h-6 absolute bg-white rounded-full ball" />
+                </label>
+            </div>
         </div>
     )
 

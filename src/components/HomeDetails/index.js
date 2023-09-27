@@ -33,7 +33,7 @@ const HomeDetails = () => {
             <img src={longHandsomeMan} alt="Michael Koch" className="ProfilePicMobile md:hidden preload delayedItem" />
             <h1 className="PageHeader max-md:hidden preload">Hello</h1>        
             <h1 className="PageHeaderMobile md:hidden preload">Hello</h1>      
-            <div className="PageDescription max-md:hidden md:PageDescriptionMobile preload delayedItem">
+            <div className="PageDescription max-md:hidden md:PageDescriptionMobile font-bold">
                 <PageDescription />
             </div>
             <div className="md:hidden PageDescriptionMobile font-bold preload delayedItem">

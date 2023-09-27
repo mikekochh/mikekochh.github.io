@@ -1,0 +1,13 @@
+.video-player {
+    display: flex; /* Use flexbox layout */
+    align-items: center; /* Vertically center items */
+  }
+  
+  .video-container {
+    flex: 1; /* Expand to fill available space */
+    margin-right: 20px; /* Adjust spacing between video and text */
+  }
+  
+  .text-container {
+    flex: 0; 
+  }

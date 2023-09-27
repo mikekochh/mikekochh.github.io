@@ -1,0 +1,7 @@
+$total-items: 11; // Total number of items
+
+@for $i from 1 through $total-items {
+  .delayedItemJob:nth-child(#{$i}) {
+    transition-delay: #{$i * 100ms};
+  }
+}
