@@ -1,6 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const PageDescription = () => {
+
+    useEffect(() => {
+        const delayedItemsName = document.querySelectorAll('.delayedItemName');
+        const delayedItemsWelcome = document.querySelectorAll('.delayedItemWelcome');
+    
+        setTimeout(() => {
+            delayedItemsName.forEach((element) => element.classList.remove('delayedItemName'));
+            delayedItemsWelcome.forEach((element) => element.classList.remove('delayedItemWelcome'));
+        }, 2000);
+    }, []);
 
     return (
     <p>

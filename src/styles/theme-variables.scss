@@ -1,7 +1,45 @@
 .theme-light {
-  color: white;
+  color: #000000;
+  background: #00FFFF;
+
+  .experience-card {
+    background: #0B3954;
+    color: #ffffff;
+  }
+
+  .work-experience-card {
+    background: #ffffff;
+    color: #000000;
+    border-color: #000000;
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer;
+  }
+
+  .work-experience-card:hover {
+    background: #eeeeee;
+  }
 }
 
 .theme-dark {
-  color: black;
+  color: white;
+  background:  #0B3954;
+
+  .experience-card {
+    background: #00dddd;
+    color: #000000;
+  }
+
+  .work-experience-card {
+    background: #000000;
+    color: #ffffff;
+    border-color: #ffffff;
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer;
+  }
+
+  .work-experience-card:hover {
+    background: #222222;
+  }
 }

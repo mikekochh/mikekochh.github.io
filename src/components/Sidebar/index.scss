@@ -127,6 +127,17 @@
     }
 }
 
+.toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border-radius: 20px;
+    position: relative;
+  }
+
 .fa-sun {
     color: yellow;
     font-size: 13px;
@@ -135,8 +146,7 @@
 .fa-moon {
     color: pink;
     font-size: 13px;
-    display: flex;
-    justify-content: right;
+    padding-right: 2px;
 }
 
 .ball {

@@ -5,7 +5,7 @@ import { JPMorganDetails, CCLRDetails, MaxetaDetails } from './CompanyDetails';
 import { useEffect } from 'react';
 import VideoPlayer from '../VideoPlayer';
 
-const JobDetails = ({companyName, timeFrame, companyID}) => {
+const JobDetails = ({companyName, timeFrame, companyID, companyURL}) => {
 
     const companyDetail = (companyID) => {
         switch(companyID) {
@@ -21,12 +21,14 @@ const JobDetails = ({companyName, timeFrame, companyID}) => {
     }
 
     return (        
-        <div>
-            <p className="text-5xl mt-10 preload delayedItem">{companyName}</p>
-            <p className="text-4xl mt-5 preload delayedItem">{timeFrame}</p>
-            <div>
-                {companyDetail(companyID)}
-            </div>
+        <div className="rounded-xl p-4 pt-1 w-3/4 work-experience-card">
+            <a href={companyURL} target='_blank' rel="noreferrer">
+                <p className="text-5xl mt-10 preload delayedItem">{companyName}</p>
+                <p className="text-4xl mt-5 preload delayedItem">{timeFrame}</p>
+                <div>
+                    {companyDetail(companyID)}
+                </div>
+            </a>
         </div>    
 
     );
@@ -52,21 +54,26 @@ const AboutDetails = () => {
     }, []);
 
     return (
-        <div className="ml-40 font-mono font-bold text-white mb-100 about">
+        <div className="ml-40 font-mono font-bold mb-100 about">
             <h1 className="mt-40 text-9xl text-center preload delayedItem">About Me</h1>
-            <p className="text-7xl mt-10 preload delayedItem">Work Experience</p>
-            <JobDetails companyName="JP Morgan & Chase" timeFrame="March 2023 - Present" companyID={1} />
+            <p className="text-7xl mt-10 mb-5 preload delayedItem">Work Experience</p>
+            <JobDetails companyName="JP Morgan & Chase" timeFrame="March 2023 - Present" companyID={1} companyURL={"https://www.jpmorgan.com/global"} />
             <br/>
             <br/>
-            <JobDetails companyName="Center City Legal & Reporting, Inc." timeFrame="May 2021 - March 2023" companyID={2} />
+            <JobDetails companyName="Center City Legal & Reporting, Inc." timeFrame="May 2021 - March 2023" companyID={2} companyURL={"https://www.cclrinc.com/"} />
             <br/>
             <br/>
-            <JobDetails companyName="Maxeta Technologies, Inc." timeFrame="June 2020 - August 2020" companyID={3} />
+            <JobDetails companyName="Maxeta Technologies, Inc." timeFrame="June 2020 - August 2020" companyID={3} companyURL={"https://www.maxetatech.com/"} />
             <br/>
             <br/>
             <h1 className="text-7xl mt-10 delayedItem">Projects</h1><br />
-            <div><VideoPlayer videoTitle="Project 1" videoSubtitle="Portfolio Project" video={PortfolioVideo}/></div><br />
-            <div><VideoPlayer videoTitle="Project 2" videoSubtitle="NFT Real Estate Application" video={EstateVideo}/></div><br />
+            <div className="flex justify-evenly flex-3">            
+                <div><VideoPlayer videoTitle="Portfolio Project" videoSubtitle="Portfolio project for displaying experience, skillset, and projects that I have worked on for clients. Built and inspired entirely by me." video={PortfolioVideo}/></div>
+                <div><VideoPlayer videoTitle="NFT Real Estate Application" videoSubtitle="Real Estate application built on blockchain technology. Each property is digitized and is able to be bought and sold amongst other application users." video={EstateVideo}/></div>
+                <div><VideoPlayer videoTitle="Task Tracker" videoSubtitle="Simple task tracking application. Built entirely using React and Vanilla CSS." video={EstateVideo}/></div>
+            </div>
+            <br /><br /><br /><br /><br />
+
         </div>
     )
 }

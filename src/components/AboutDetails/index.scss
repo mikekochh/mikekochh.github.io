@@ -5,3 +5,7 @@ $total-items: 11; // Total number of items
     transition-delay: #{$i * 100ms};
   }
 }
+
+.experience-card-container {
+  display: flex;
+}
