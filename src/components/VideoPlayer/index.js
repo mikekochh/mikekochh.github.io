@@ -10,7 +10,15 @@ const VideoCard = ({ video, videoTitle, videoSubtitle, videoLink, githubLink }) 
                         <source src={video} type="video/mp4" />
                     </video>
                 </div>
+                <div>
+                    <a href={githubLink} target="_blank" rel="noreferrer">
+                        <button className="bg-gray-400 hover:bg-gray-500 text-white font-bold py-2 px-4 rounded">
+                            GitHub
+                        </button>
+                    </a>
+                </div>
             </div>
+            
         </div>
 
     );
