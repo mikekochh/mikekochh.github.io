@@ -59,7 +59,7 @@ const AboutDetails = () => {
             <h1 className="mt-40 text-9xl text-center preload delayedItem">About Me</h1><br />
             <div className="text-center">
                 <a href={Resume} download="Michael-Koch-Resume" className="p-16">
-                    <button className="bg-gray-400 hover:bg-gray-500 text-white font-bold py-2 px-4 rounded-lg text-3xl">
+                    <button className="bg-gray-400 hover:bg-gray-500 text-white font-bold py-2 px-4 rounded-lg text-3xl preload delayedItem">
                         Download Full Resume (PDF)
                     </button>
                 </a>
@@ -76,9 +76,9 @@ const AboutDetails = () => {
             <JobDetails companyName="Maxeta Technologies, Inc." timeFrame="June 2020 - August 2020" companyID={3} companyURL={"https://www.maxetatech.com/"} />
             <br/>
             <br/>
-            <h1 className="text-7xl mt-10 delayedItem">Projects</h1><br />
+            <h1 className="text-7xl mt-10 preload delayedItem">Projects</h1><br />
             <div className="flex justify-evenly flex-3 pr-16 flex-wrap">            
-                <div className="w-1/3 p-2">
+                <div className="w-1/3 p-2 preload delayedItem">
                     <VideoPlayer 
                         videoTitle="Portfolio Project" 
                         videoSubtitle="Portfolio project for displaying experience, skillset, and projects that I have worked on for clients. Built and inspired entirely by me." 
@@ -86,7 +86,7 @@ const AboutDetails = () => {
                         githubLink="https://github.com/mikekochh/portfolio"
                     />
                 </div>
-                <div className="w-1/3 p-2">
+                <div className="w-1/3 p-2 preload delayedItem">
                     <VideoPlayer 
                         videoTitle="NFT Real Estate Application" 
                         videoSubtitle="Real Estate application built on blockchain technology. Each property is digitized and is able to be bought and sold amongst other application users." 
@@ -94,7 +94,7 @@ const AboutDetails = () => {
                         githubLink="https://github.com/mikekochh/NFT_Marketplace"    
                     />
                 </div>
-                <div className="w-1/3 p-2">
+                <div className="w-1/3 p-2 preload delayedItem">
                     <VideoPlayer 
                         videoTitle="Task Tracker" 
                         videoSubtitle="Simple task tracking application. Built entirely using React and Vanilla CSS." 
@@ -103,8 +103,6 @@ const AboutDetails = () => {
                     />
                 </div>    
             </div>
-            <br /><br /><br /><br /><br />
-
         </div>
     )
 }

@@ -21,19 +21,6 @@ const HomeDetails = () => {
         hiddenElements.forEach((element) => observer.observe(element));
 
         const letterSpans = document.querySelectorAll('.PageHeader span');
-       
-
-        const dotsSpan = Array.from(document.querySelectorAll('#repeat')).reverse();
-        const endLine = document.querySelector('#endLine');
-
-        function repeatEndLine() {
-            endLine.classList.add('hidden');
-            endLine.classList.remove('inline-block');
-            setTimeout(() => {
-                endLine.classList.add('inline-block');
-                endLine.classList.remove('hidden');
-            }, 1000);
-        }
 
         function revealLetters() { 
             letterSpans.forEach((span, idx) => {
@@ -42,9 +29,6 @@ const HomeDetails = () => {
                     span.classList.remove('hidden');
                 }, 200 * (idx + 1));
             });
-            setTimeout(() => {
-                repeatEndLine();
-            }, 2000);
         }
     
         window.addEventListener('load', revealLetters);
@@ -66,7 +50,6 @@ const HomeDetails = () => {
                 <span className="hidden" id="2">l</span>
                 <span className="hidden" id="3">l</span>
                 <span className="hidden" id="4">o</span>
-                <span className="hidden" id="endLine">|</span>
             </h1>        
             <h1 className="PageHeaderMobile md:hidden preload">Hello</h1>      
             <div className="PageDescription max-md:hidden md:PageDescriptionMobile font-bold">

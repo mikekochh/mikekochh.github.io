@@ -1,60 +1,56 @@
 import './index.scss';
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 const ContactDetails = () => { 
+
+    const refForm = useRef(null);
+
+    const sendEmail = (e) => { 
+        e.preventDefault();
+
+        console.log("refForm.current", refForm.current);
+
+        emailjs.sendForm('service_r1ox46y', 'template_bq2pg4h', refForm.current, '1RTC3gf2JenbsQAZu') // TODO: Hide these variables so people do not steal them
+            .then(
+                () => {
+                    alert('Message successfully sent, thank you!');
+                    window.location.reload();
+                },
+                (error) => {
+                    console.log("error", error);
+                    alert('Failed to send the message, please try again');
+                }
+            )
+    }   
+
     return (
         <div className="ml-40 font-mono font-bold mb-100 contact">
             <h1 className="mt-40 text-9xl text-center">Contact Me</h1>
-            <div className="flex mt-20">
-                <p className="text-center text-3xl w-1/2">
+            <div className="mt-20 text-center">
+                <p className="text-center text-3xl w-1/2 mx-auto">
                     I am always interest in freelancing opportunities and exploring business relationships.
                     But, if you need anything else from me, feel free to reach out to me and I will get back
-                    to you as soon as I can. </p>
-                <div className="contact-form">
-                    <form>
-                        <ul>
-                            <li className="w-1/2">
-                                <input 
-                                    type="text" 
-                                    name="name" 
-                                    placeholder="Name" 
-                                    required
-                                />
-                            </li>
-                            <li className="w-1/2">
-                                <input 
-                                    type="email" 
-                                    name="email" 
-                                    placeholder="Email" 
-                                    required
-                                />
-                            </li>
-                            <li>
-                                <input 
-                                    placeholder="Subject" 
-                                    type="text" 
-                                    name="subject"
-                                    required 
-                                />
-                            </li>
-                            <li>
-                                <textarea 
-                                    placeholder="Message" 
-                                    name="message" 
-                                    required 
-                                />
-                            </li>
-                            <li>
-                                <input 
-                                    type="submit"
-                                    value="SEND" 
-                                />
-                            </li>
-                        </ul>
+                    to you as soon as I can. Thank you! </p><br/>
+                <div className="contact-form text-center mx-auto w-8/12">
+                    <form ref={refForm} onSubmit={sendEmail} className="flex flex-column">
+                        <div className="form-row">
+                            <input type="text" name="name" placeholder="Name" required className="email-inputs"/>
+                            <input type="email" name="email" placeholder="Email" required className="ml-10 email-inputs" />
+                        </div>
+                        <div className="form-row">
+                            <input placeholder="Subject" type="text" name="subject" required className="email-inputs"/>
+                        </div>
+                        <div className="form-row">
+                            <textarea placeholder="Message" name="message" rows={4} required className="email-inputs" />
+                        </div>
+                        <div className="form-row">
+                            <input type="submit" value="SEND" className="send-button cursor-pointer" />
+                        </div>
                     </form>
                 </div>
             </div>
-            <br /><br /><br /><br /><br /><br /><br />
-
+            <br /><br />
         </div>
     );
 }

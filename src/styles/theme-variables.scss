@@ -8,7 +8,7 @@
   }
 
   .work-experience-card {
-    background: #ffffff;
+    background: #eeeeee;
     color: #000000;
     border-color: #000000;
     border-style: solid;
@@ -17,7 +17,8 @@
   }
 
   .work-experience-card:hover {
-    background: #eeeeee;
+    background: #ffffff;
+    border-width: 2px;
   }
 }
 
@@ -41,5 +42,6 @@
 
   .work-experience-card:hover {
     background: #222222;
+    border-width: 2px;
   }
 }
