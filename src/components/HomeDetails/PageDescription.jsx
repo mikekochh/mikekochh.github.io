@@ -1,33 +1,20 @@
-import React, { useEffect } from 'react';
-
 const PageDescription = () => {
-
-    useEffect(() => {
-        const delayedItemsName = document.querySelectorAll('.delayedItemName');
-        const delayedItemsWelcome = document.querySelectorAll('.delayedItemWelcome');
-    
-        setTimeout(() => {
-            delayedItemsName.forEach((element) => element.classList.remove('delayedItemName'));
-            delayedItemsWelcome.forEach((element) => element.classList.remove('delayedItemWelcome'));
-        }, 2000);
-    }, []);
 
     return (
     <p>
-        <span className="preload delayedItemName">My name is Michael Koch,</span><span className="preload delayedItemWelcome"> welcome to my portfolio page!</span>
+        <span className="preload delayedItemName" hasBeenAnimation={false} >My name is Michael Koch,</span><span className="preload delayedItemWelcome" hasBeenAnimation={false}> welcome to my portfolio page!</span>
         <br /><br />
-        <p className="preload delayedItem">
+        <p className="preload delayedItem" hasBeenAnimation={false} >
             I am a software developer with a passion for solving business problems with software. 
             In the about section, you can see my work experience, projects that I have worked 
             on, and for the technical people you can see the tech stack that I am best with. 
         </p>
         <br />
-        <p className="preload delayedItem">
+        <p className="preload delayedItem" hasBeenAnimation={false} >
             If you want me to help you build excellent software or if you just want to say hi,
             please come to the contact page and send me a message. I look forward to hearing from you!
         </p>
         <br />
-        <p className="preload delayedItem">Codebase for this website can be found <a href="https://github.com/mikekochh/portfolio" target='_blank' rel="noreferrer">here</a></p>
     </p>
     )
 }

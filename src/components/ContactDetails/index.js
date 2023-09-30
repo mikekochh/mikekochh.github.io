@@ -25,14 +25,14 @@ const ContactDetails = () => {
     }   
 
     return (
-        <div className="ml-40 font-mono font-bold mb-100 contact">
-            <h1 className="mt-40 text-9xl text-center">Contact Me</h1>
-            <div className="mt-20 text-center">
-                <p className="text-center text-3xl w-1/2 mx-auto">
+        <div className="ml-40 font-mono font-bold contact">
+            <h1 className="mt-40 text-60 text-center">Contact Me</h1>
+            <div className="mt-5 text-center">
+                <p className="text-center text-15 w-1/2 mx-auto contactMeWidth">
                     I am always interest in freelancing opportunities and exploring business relationships.
                     But, if you need anything else from me, feel free to reach out to me and I will get back
                     to you as soon as I can. Thank you! </p><br/>
-                <div className="contact-form text-center mx-auto w-8/12">
+                <div className="text-center mx-auto w-8/12">
                     <form ref={refForm} onSubmit={sendEmail} className="flex flex-column">
                         <div className="form-row">
                             <input type="text" name="name" placeholder="Name" required className="email-inputs"/>

@@ -1,8 +1,10 @@
-const VideoCard = ({ video, videoTitle, videoSubtitle, videoLink, githubLink }) => { 
+import ExperienceCard from "../ExperienceCard";
+
+const VideoCard = ({ video, videoTitle, videoSubtitle, videoLink, githubLink, languages }) => { 
     return (
         <div className="work-experience-card p-4 m-2 rounded-lg">
-            <h1 className="text-5xl">{videoTitle}</h1><br/>
-            <h2 className="text-3xl">{videoSubtitle}</h2>
+            <h1 className="text-30">{videoTitle}</h1><br/>
+            <h2 className="text-12">{videoSubtitle}</h2>
             <br />
             <div className="flex">
                 <div className="flex-1 mr-4 rounded-lg">
@@ -18,9 +20,12 @@ const VideoCard = ({ video, videoTitle, videoSubtitle, videoLink, githubLink }) 
                     </a>
                 </div>
             </div>
-            
+            <div class="flex flex-wrap flex-row">
+                {languages.map((language) => (
+                    <ExperienceCard experience={language} />
+                ))}
+            </div>
         </div>
-
     );
 }
 

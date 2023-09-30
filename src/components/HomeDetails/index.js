@@ -6,20 +6,6 @@ import { useEffect } from 'react';
 
 const HomeDetails = () => {    
     useEffect(() => {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('postload');
-                    entry.target.classList.remove('preload');
-                } else {
-                    entry.target.classList.remove('postload');
-                }
-            });
-         });
-
-        const hiddenElements = document.querySelectorAll('.preload');
-        hiddenElements.forEach((element) => observer.observe(element));
-
         const letterSpans = document.querySelectorAll('.PageHeader span');
 
         function revealLetters() { 
@@ -42,20 +28,17 @@ const HomeDetails = () => {
 
     return (
         <div className='home'>
+            <br />
             <img src={handsomeMan} alt="Michael Koch" className="ProfilePic max-md:hidden preload delayedItem" />
             <img src={longHandsomeMan} alt="Michael Koch" className="ProfilePicMobile md:hidden preload delayedItem" />
-            <h1 className="PageHeader max-md:hidden ">
+            <h1 className="PageHeader text-100 font-mono md:pl-80 pl-32"> 
                 <span className="hidden">H</span>
-                <span className="hidden" id="1">e</span>
-                <span className="hidden" id="2">l</span>
-                <span className="hidden" id="3">l</span>
-                <span className="hidden" id="4">o</span>
-            </h1>        
-            <h1 className="PageHeaderMobile md:hidden preload">Hello</h1>      
-            <div className="PageDescription max-md:hidden md:PageDescriptionMobile font-bold">
-                <PageDescription />
-            </div>
-            <div className="md:hidden PageDescriptionMobile font-bold preload delayedItem">
+                <span className="hidden">e</span>
+                <span className="hidden">l</span>
+                <span className="hidden">l</span>
+                <span className="hidden">o</span>
+            </h1> 
+            <div className="PageDescription pl-80 font-bold md:pl-100 pr-5">
                 <PageDescription />
             </div>
         </div>

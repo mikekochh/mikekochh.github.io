@@ -46,7 +46,6 @@ const Sidebar = ({ theme, setTheme }) => {
     }, []);
 
     const handleIconClick = (className) => () => { 
-        console.log("handleIconClick");
         const targetElement = document.querySelector(`.${className}`);
         if (targetElement) {
             targetElement.scrollIntoView({ behavior: 'smooth' });
