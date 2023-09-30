@@ -25,7 +25,7 @@ const HomeDetails = () => {
             <br />
             <img src={handsomeMan} alt="Michael Koch" className="ProfilePic max-md:hidden preload" />
             <img src={longHandsomeMan} alt="Michael Koch" className="ProfilePicMobile md:hidden preload" />
-            <h1 className="PageHeader text-100 font-mono md:pl-80 pl-32"> 
+            <h1 className="PageHeader text-100 font-mono md:pl-100 pl-32"> 
                 <span className="hidden">H</span>
                 <span className="hidden">e</span>
                 <span className="hidden">l</span>
