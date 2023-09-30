@@ -26,8 +26,8 @@ const ContactDetails = () => {
 
     return (
         <div className="ml-40 font-mono font-bold contact">
-            <h1 className="mt-40 text-60 text-center">Contact Me</h1>
-            <div className="mt-5 text-center">
+            <h1 className="mt-40 text-60 text-center preload">Contact Me</h1>
+            <div className="mt-5 text-center preload">
                 <p className="text-center text-15 w-1/2 mx-auto contactMeWidth">
                     I am always interest in freelancing opportunities and exploring business relationships.
                     But, if you need anything else from me, feel free to reach out to me and I will get back

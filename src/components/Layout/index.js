@@ -16,20 +16,18 @@ const Layout = () => {
     }, []);
 
     useEffect(() => {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('postload');
-                    entry.target.classList.remove('preload');
-                } else {
-                    entry.target.classList.remove('postload');
-                    entry.target.classList.add('preload');}
+        const displayComponents = () => {
+            const hiddenElements = document.querySelectorAll('.preload');
+            hiddenElements.forEach((element) => {
+                element.classList.remove('preload');
+                element.classList.add('postload');
             });
-         });
+        }
 
-        const hiddenElements = document.querySelectorAll('.preload');
-        hiddenElements.forEach((element) => observer.observe(element));
-    }, []);
+        setTimeout(() => {
+            displayComponents();
+        }, 4000);
+    })
 
     return (
         <ThemeContext.Provider value={{ theme, setTheme }}>

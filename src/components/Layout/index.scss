@@ -14,16 +14,14 @@
     transition: all 2s;
 }
 
-.delayedItem {
-    transition-delay: 4000ms;
+.preloadName {
+    opacity: 0;
+    transform: translateY(100%);
 }
 
-.delayedItemName {
-    transition-delay: 2000ms;
-}
-
-.delayedItemWelcome {
-    transition-delay: 3000ms;
+.preloadWelcome {
+    opacity: 0;
+    transform: translateY(100%);
 }
 
 
