@@ -4,7 +4,7 @@ import { Link, NavLink } from 'react-router-dom';
 import blackLogo from '../../assets/images/blackLogo.jpg';
 import highlightedLogo from '../../assets/images/highlightedLogo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faHome, faMoon, faS, faSun, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faHome, faMoon, faSun, faUser } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 
 const Sidebar = ({ theme, setTheme }) => {
@@ -25,15 +25,15 @@ const Sidebar = ({ theme, setTheme }) => {
             const homeElement = document.querySelector('.home');
             const aboutElement = document.querySelector('.about');
             const contactElement = document.querySelector('.contact');
+            const scrollTop = window.scrollY;
 
-            if (homeElement && window.scrollY < homeElement.offsetTop + homeElement.offsetHeight) {
+            if (homeElement && scrollTop < homeElement.offsetTop + homeElement.offsetHeight) {
                 setActiveLink('home');
             }
-            else if (aboutElement && window.scrollY >= aboutElement.offsetTop && window.scrollY < aboutElement.offsetTop + aboutElement.offsetHeight) {
-                console.log("Were here?");
+            else if (aboutElement && scrollTop >= aboutElement.offsetTop - 1 && scrollTop < aboutElement.offsetTop + aboutElement.offsetHeight) {
                 setActiveLink('about');
             }
-            else if (contactElement && window.scrollY >= contactElement.offsetTop && window.scrollY < contactElement.offsetTop + contactElement.offsetHeight) {
+            if (contactElement && scrollTop + window.innerHeight > document.documentElement.scrollHeight - 1) {
                 setActiveLink('contact');
             }
         }
@@ -49,14 +49,21 @@ const Sidebar = ({ theme, setTheme }) => {
         const targetElement = document.querySelector(`.${className}`);
         if (targetElement) {
             targetElement.scrollIntoView({ behavior: 'smooth' });
-            let isScrolling;
-            window.addEventListener('scroll', () => {
+
+            const handleAutomaticScrolling = () => {
+                let isScrolling;
                 clearTimeout(isScrolling);
 
                 isScrolling = setTimeout(() => {
                     setActiveLink(className);
                 }, 1000); 
-            });
+            }
+
+            window.addEventListener('scroll', handleAutomaticScrolling);
+
+            setTimeout(() => {
+                window.removeEventListener('scroll', handleAutomaticScrolling);
+            }, 1500);
         }
     }
 

@@ -32,7 +32,9 @@ const Layout = () => {
     return (
         <ThemeContext.Provider value={{ theme, setTheme }}>
             <div className={`theme-${theme}`}>
+            <div>
                 <Sidebar theme={theme} setTheme={setTheme}/>
+            </div>
                 <HomeDetails />
                 <AboutDetails />
                 <ContactDetails />
