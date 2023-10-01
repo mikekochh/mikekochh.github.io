@@ -100,12 +100,11 @@ const Sidebar = ({ theme, setTheme }) => {
                     </a>
                 </li>
             </ul>
-            <div className="flex justify-center mt-2" >
+            <div className="flex justify-center mt-2 mb-4" >
                 <input type="checkbox" className="checkbox" id="checkbox" onChange={() => setTheme(theme === 'light' ? 'dark' : 'light')} />
                 <label htmlFor="checkbox" className="flexBetween w-16 h-8 bg-black rounded-2xl p-1 relative label cursor-pointer">
                 <div className="toggle">
                     <FontAwesomeIcon icon={faSun} className="fa-sun" />
-                    
                     <FontAwesomeIcon icon={faMoon} className="fa-moon" />
                 </div>
                 <div className="w-6 h-6 absolute bg-white rounded-full ball" />

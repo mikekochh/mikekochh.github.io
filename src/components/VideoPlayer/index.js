@@ -1,8 +1,8 @@
 import ExperienceCard from "../ExperienceCard";
 
-const VideoCard = ({ video, videoTitle, videoSubtitle, videoLink, githubLink, languages }) => { 
+const VideoCard = ({ video, videoTitle, videoSubtitle, githubLink, languages }) => { 
     return (
-        <div className="work-experience-card p-4 m-2 rounded-lg">
+        <div className="project-card p-4 m-2 rounded-lg">
             <h1 className="text-30">{videoTitle}</h1><br/>
             <h2 className="text-12">{videoSubtitle}</h2>
             <br />

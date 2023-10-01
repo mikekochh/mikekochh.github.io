@@ -7,18 +7,18 @@
     color: #ffffff;
   }
 
-  .work-experience-card {
-    background: #eeeeee;
+  .project-card {
+    background: #ffffff;
     color: #000000;
     border-color: #000000;
     border-style: solid;
     border-width: 1px;
-    cursor: pointer;
+    cursor: default;
   }
 
   .work-experience-card:hover {
     background: #ffffff;
-    border-width: 2px;
+    border: 1px solid #000000;
   }
 }
 
@@ -31,7 +31,7 @@
     color: #000000;
   }
 
-  .work-experience-card {
+  .project-card {
     background: #000000;
     color: #ffffff;
     border-color: #ffffff;
@@ -41,7 +41,9 @@
   }
 
   .work-experience-card:hover {
-    background: #222222;
-    border-width: 2px;
+    transition-delay: 0ms;
+    transition: 0s;
+    background: #000000;
+    border: 1px solid #ffffff;
   }
 }

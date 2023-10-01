@@ -1,5 +1,6 @@
 import PortfolioVideo from '../../assets/videos/Portfolio-Project-Demo-1.mp4';
 import EstateVideo from '../../assets/videos/Demo-Desktop-Estate.mp4';
+import TaskTrackerVideo from '../../assets/videos/Task-Tracker-Demo.mp4';
 import Resume from '../../assets/resume/Michael-Koch-Resume.pdf';
 import './index.scss'
 import { JPMorganDetails, CCLRDetails, MaxetaDetails } from './CompanyDetails';
@@ -20,16 +21,30 @@ const JobDetails = ({companyName, timeFrame, companyID, companyURL}) => {
         }
     }
 
-    return (        
-        <div className="rounded-xl p-4 pt-1 md:w-3/4 ml-1 mr-1 work-experience-card preload">
-            <a href={companyURL} target='_blank' rel="noreferrer">
-                <p className="text-30">{companyName}</p>
-                <p className="text-20">{timeFrame}</p>
-                <div>
-                    {companyDetail(companyID)}
-                </div>
-            </a>
-        </div>    
+    return (  
+         
+        <div>
+            {/* Desktop */}
+            <div className="rounded-xl p-4 pt-1 md:w-3/4 ml-1 mr-1 work-experience-card max-md:hidden">
+                <a href={companyURL} target='_blank' rel="noreferrer">
+                    <p className="text-30">{companyName}</p>
+                    <p className="text-20">{timeFrame}</p>
+                    <div>
+                        {companyDetail(companyID)}
+                    </div>
+                </a>
+            </div>  
+            {/* Mobile */}  
+            <div className="rounded-xl p-4 pt-1 md:w-3/4 ml-1 mr-1 project-card md:hidden">
+                <a href={companyURL} target='_blank' rel="noreferrer">
+                    <p className="text-30">{companyName}</p>
+                    <p className="text-20">{timeFrame}</p>
+                    <div>
+                        {companyDetail(companyID)}
+                    </div>
+                </a>
+            </div>  
+        </div>
 
     );
 
@@ -42,7 +57,10 @@ const AboutDetails = () => {
             <p className="md:text-60 text-30 md:mb-5 md:text-left text-center preload">
                 Work Experience
             </p>
-            <JobDetails companyName="JP Morgan & Chase" timeFrame="March 2023 - Present" companyID={1} companyURL={"https://www.jpmorgan.com/global"} />
+            <div className="preload">
+                <JobDetails companyName="JP Morgan & Chase" timeFrame="March 2023 - Present" companyID={1} companyURL={"https://www.jpmorgan.com/global"} />
+            </div>
+            
             <br/>
             <br/>
             <JobDetails companyName="Center City Legal & Reporting, Inc." timeFrame="May 2021 - March 2023" companyID={2} companyURL={"https://www.cclrinc.com/"} />
@@ -56,7 +74,7 @@ const AboutDetails = () => {
                 <div className="md:w-1/3 preload">
                     <VideoPlayer 
                         videoTitle="Portfolio" 
-                        videoSubtitle="Portfolio project for displaying experience, skillset, and projects that I have worked on for clients. Built and inspired entirely by me." 
+                        videoSubtitle="Portfolio project for displaying experience, skillset, and projects that I have worked as a software developer." 
                         video={PortfolioVideo}
                         githubLink="https://github.com/mikekochh/portfolio"
                         languages={["ReactJS", "TailwindCSS"]}
@@ -67,7 +85,7 @@ const AboutDetails = () => {
                 <div className="md:w-1/3 preload">
                     <VideoPlayer 
                         videoTitle="NFT Real Estate Application" 
-                        videoSubtitle="Real Estate application built on blockchain technology. Each property is digitized and is able to be bought and sold amongst other application users." 
+                        videoSubtitle="Real Estate application where each property is digitized on a blockchain and is able to be bought and sold amongst other application users." 
                         video={EstateVideo}
                         githubLink="https://github.com/mikekochh/NFT_Marketplace"
                         languages={["NextJS", "Solidity", "Hardhat", "Ethereum", "TailwindCSS"]}    
@@ -78,8 +96,8 @@ const AboutDetails = () => {
                 <div className="md:w-1/3 preload">
                     <VideoPlayer 
                         videoTitle="Task Tracker" 
-                        videoSubtitle="Simple task tracking application. Built entirely using React and Vanilla CSS." 
-                        video={EstateVideo}
+                        videoSubtitle="Simple task tracking application where users are able add tasks, move tasks through different statuses, and delete them." 
+                        video={TaskTrackerVideo}
                         githubLink="https://github.com/mikekochh/Task-Tracker"   
                         languages={["ReactJS", "Vanilla CSS"]} 
                     />
