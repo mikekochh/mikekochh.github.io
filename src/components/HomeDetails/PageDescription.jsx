@@ -33,14 +33,15 @@ const PageDescription = () => {
         <span className="preloadName" hasBeenAnimation={false} >My name is Michael Koch,</span><span className="preloadWelcome" hasBeenAnimation={false}> welcome to my portfolio page!</span>
         <br /><br />
         <p className="preload" hasBeenAnimation={false} >
-            I am a software developer with a passion for solving business problems with software. 
-            In the about section, you can see my work experience, projects that I have worked 
-            on, and for the technical people you can see the tech stack that I am best with. 
+            I am a dedicated software developer driven by a commitment to address complex business challenges through innocative software solutions. 
         </p>
         <br />
         <p className="preload" hasBeenAnimation={false} >
-            If you want me to help you build excellent software or if you just want to say hi,
-            please come to the contact page and send me a message. I look forward to hearing from you!
+            In the about me section, you can learn about my professional work experience, projects that I have worked on, and download my full resume.
+        </p>
+        <br />
+        <p className="preload" hasBeenAnimation={false} >
+            If you are looking for some help building software, or simply wish to say hi, please come to the contact page and send me a message. I look forward to hearing from you!
         </p>
         <br />
     </p>

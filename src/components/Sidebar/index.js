@@ -72,17 +72,6 @@ const Sidebar = ({ theme, setTheme }) => {
             <Link to='/'>
                 <img className='logo' src={logo} alt='Logo' onMouseEnter={highlightLogo} onMouseLeave={unhighlightLogo} />
             </Link>
-            <nav>
-                <NavLink exact className="NavLinkHome" onClick={handleIconClick('home')}>
-                    <FontAwesomeIcon icon={faHome} color={activeLink === 'home' ? '#FFA500' : '#4d4d4e'} />
-                </NavLink>
-                <NavLink exact className="NavLinkAbout" onClick={handleIconClick('about')}>
-                    <FontAwesomeIcon icon={faUser} color={activeLink === 'about' ? '#FFA500' : '#4d4d4e'} />
-                </NavLink>
-                <NavLink exact className="NavLinkContact" onClick={handleIconClick('contact')}>
-                    <FontAwesomeIcon icon={faEnvelope} color={activeLink === 'contact' ? '#FFA500' : '#4d4d4e'} />
-                </NavLink>
-            </nav>
             <ul>
                 <li className='linkedinLink'>
                     <a href='https://www.linkedin.com/in/michael-koch-6378831a2/' target='_blank' rel="noreferrer">
@@ -110,6 +99,17 @@ const Sidebar = ({ theme, setTheme }) => {
                 <div className="w-6 h-6 absolute bg-white rounded-full ball" />
                 </label>
             </div>
+            <nav>
+                <NavLink exact className="NavLinkHome" onClick={handleIconClick('home')}>
+                    <FontAwesomeIcon icon={faHome} color={activeLink === 'home' ? '#FFA500' : '#4d4d4e'} />
+                </NavLink>
+                <NavLink exact className="NavLinkAbout" onClick={handleIconClick('about')}>
+                    <FontAwesomeIcon icon={faUser} color={activeLink === 'about' ? '#FFA500' : '#4d4d4e'} />
+                </NavLink>
+                <NavLink exact className="NavLinkContact" onClick={handleIconClick('contact')}>
+                    <FontAwesomeIcon icon={faEnvelope} color={activeLink === 'contact' ? '#FFA500' : '#4d4d4e'} />
+                </NavLink>
+            </nav>
         </div>
     )
 

@@ -1,4 +1,4 @@
-import PortfolioVideo from '../../assets/videos/Portfolio-Project-Demo-1.mp4';
+import PortfolioVideo from '../../assets/videos/Portfolio-Demo.mp4';
 import EstateVideo from '../../assets/videos/Demo-Desktop-Estate.mp4';
 import TaskTrackerVideo from '../../assets/videos/Task-Tracker-Demo.mp4';
 import Resume from '../../assets/resume/Michael-Koch-Resume.pdf';
