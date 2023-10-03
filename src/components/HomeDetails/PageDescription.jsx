@@ -33,7 +33,7 @@ const PageDescription = () => {
         <span className="preloadName" hasBeenAnimation={false} >My name is Michael Koch,</span><span className="preloadWelcome" hasBeenAnimation={false}> welcome to my portfolio page!</span>
         <br /><br />
         <p className="preload" hasBeenAnimation={false} >
-            I am a dedicated software developer driven by a commitment to address complex business challenges through innocative software solutions. 
+            I am a dedicated software developer driven by a commitment to address complex business challenges through innovative software solutions. 
         </p>
         <br />
         <p className="preload" hasBeenAnimation={false} >
