@@ -1,6 +1,8 @@
 import './index.scss';
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin, faXTwitter, faTelegram } from '@fortawesome/free-brands-svg-icons';
 
 const ContactDetails = () => { 
 
@@ -51,8 +53,31 @@ const ContactDetails = () => {
                         </div>
                     </form>
                 </div>
+                <div>
+                    <ul>
+                        <li>
+                            <a href='https://www.linkedin.com/in/michael-koch-6378831a2/' target='_blank' rel="noreferrer">
+                            <FontAwesomeIcon icon={faLinkedin} color="#4d4d4e" className="icon" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href='https://twitter.com/MichaelKochDev' target='_blank' rel='noreferrer'>
+                                <FontAwesomeIcon icon={faXTwitter} color="#4d4d4e" className="icon" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href='https://github.com/mikekochh' target='_blank' rel='noreferrer'>
+                                <FontAwesomeIcon icon={faGithub} color="#4d4d4e" className="icon" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href='https://t.me/mikekochh' target='_blank' rel='noreferrer'>
+                                <FontAwesomeIcon icon={faTelegram} color="#4d4d4e" className="icon" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <br /><br /><br /><br />
         </div>
     );
 }

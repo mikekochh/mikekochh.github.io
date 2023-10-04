@@ -5,7 +5,6 @@ import blackLogo from '../../assets/images/blackLogo.jpg';
 import highlightedLogo from '../../assets/images/highlightedLogo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faHome, faMoon, faSun, faUser } from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faLinkedin, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 
 const Sidebar = ({ theme, setTheme }) => {
 
@@ -57,23 +56,6 @@ const Sidebar = ({ theme, setTheme }) => {
             <Link to='/'>
                 <img className='logo' src={logo} alt='Logo' onMouseEnter={highlightLogo} onMouseLeave={unhighlightLogo} />
             </Link>
-            <ul>
-                <li className='linkedinLink'>
-                    <a href='https://www.linkedin.com/in/michael-koch-6378831a2/' target='_blank' rel="noreferrer">
-                    <FontAwesomeIcon icon={faLinkedin} color="#4d4d4e"  />
-                    </a>
-                </li>
-                <li>
-                    <a href='https://twitter.com/MichaelKochDev' target='_blank' rel='noreferrer'>
-                        <FontAwesomeIcon icon={faXTwitter} color="#4d4d4e"  />
-                    </a>
-                </li>
-                <li>
-                    <a href='https://github.com/mikekochh' target='_blank' rel='noreferrer'>
-                        <FontAwesomeIcon icon={faGithub} color="#4d4d4e"  />
-                    </a>
-                </li>
-            </ul>
             <div className="flex justify-center mt-2 mb-4" >
                 <input type="checkbox" className="checkbox" id="checkbox" onChange={() => setTheme(theme === 'light' ? 'dark' : 'light')} />
                 <label htmlFor="checkbox" className="flexBetween w-16 h-8 bg-black rounded-2xl p-1 relative label cursor-pointer">
