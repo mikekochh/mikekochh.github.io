@@ -63,10 +63,15 @@ const AboutDetails = () => {
             
             <br/>
             <br/>
-            <JobDetails companyName="Center City Legal & Reporting, Inc." timeFrame="May 2021 - March 2023" companyID={2} companyURL={"https://www.cclrinc.com/"} />
+            <div className="preload">
+                <JobDetails companyName="Center City Legal & Reporting, Inc." timeFrame="May 2021 - March 2023" companyID={2} companyURL={"https://www.cclrinc.com/"} />
+            </div>
+            
             <br/>
             <br/>
-            <JobDetails companyName="Maxeta Technologies, Inc." timeFrame="June 2020 - August 2020" companyID={3} companyURL={"https://www.maxetatech.com/"} />
+            <div className="preload">
+                <JobDetails companyName="Maxeta Technologies, Inc." timeFrame="June 2020 - August 2020" companyID={3} companyURL={"https://www.maxetatech.com/"} />
+            </div>
             <br/>
             <br/>
             <h1 className="text-60 mt-10 text-center md:text-left preload">Projects</h1><br />

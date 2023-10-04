@@ -30,9 +30,9 @@ const PageDescription = () => {
 
     return (
     <p>
-        <span className="preloadName" hasBeenAnimation={false} >My name is Michael Koch,</span><span className="preloadWelcome" hasBeenAnimation={false}> welcome to my portfolio page!</span>
+        <span className="preloadName" >My name is Michael Koch,</span><span className="preloadWelcome"> welcome to my portfolio page!</span>
         <br /><br />
-        <p className="preload" hasBeenAnimation={false} >
+        <p className="preload">
             I am a dedicated software developer driven by a commitment to address complex business challenges through innovative software solutions. 
         </p>
         <br />

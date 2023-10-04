@@ -6,18 +6,17 @@ import { useEffect } from 'react';
 
 const HomeDetails = () => {    
     useEffect(() => {
-        const letterSpans = document.querySelectorAll('.PageHeader span');
-
-        function revealLetters() { 
-            letterSpans.forEach((span, idx) => {
-                setTimeout(() => {
-                    span.classList.add('inline-block');
-                    span.classList.remove('hidden');
-                }, 200 * (idx + 1));
+        const displayHello = () => {
+            const hiddenElements = document.querySelectorAll('.preloadHello');
+            hiddenElements.forEach((element) => {
+                element.classList.remove('preloadHello');
+                element.classList.add('postload');
             });
         }
-    
-        window.addEventListener('load', revealLetters);
+
+        setTimeout(() => {
+            displayHello();
+        }, 1000);
     }, []);
 
     return (
@@ -25,13 +24,7 @@ const HomeDetails = () => {
             <br />
             <img src={handsomeMan} alt="Michael Koch" className="ProfilePic max-md:hidden preload" />
             <img src={longHandsomeMan} alt="Michael Koch" className="ProfilePicMobile md:hidden preload" />
-            <h1 className="PageHeader text-100 font-mono md:pl-100 pl-32"> 
-                <span className="hidden">H</span>
-                <span className="hidden">e</span>
-                <span className="hidden">l</span>
-                <span className="hidden">l</span>
-                <span className="hidden">o</span>
-            </h1> 
+            <h1 className="PageHeader text-100 font-mono md:pl-100 pl-32 preloadHello">Hello</h1> 
             <div className="PageDescription pl-80 font-bold md:pl-100 pr-5">
                 <PageDescription />
             </div>
