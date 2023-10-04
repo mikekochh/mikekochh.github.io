@@ -8,7 +8,7 @@ const VideoCard = ({ video, videoTitle, videoSubtitle, githubLink, languages }) 
             <br />
             <div className="flex">
                 <div className="flex-1 mr-4 rounded-lg">
-                    <video autoPlay muted loop title="testing" width="300" height="250">
+                    <video autoPlay muted loop playsInline title="testing" width="300" height="250">
                         <source src={video} type="video/mp4" />
                     </video>
                 </div>

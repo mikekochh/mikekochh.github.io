@@ -2,22 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-.PageHeaderMobile {
-    font-size: 96px;
-    font-family: monospace;
-    padding-left: 60px;
-    text-align: center;
-}
-
 .PageDescription {
     font-size: 24px;
     font-family: monospace;
-}
-
-.PageDescriptionMobile {
-    font-size: 24px;
-    font-family: monospace;
-    padding-left: 80px;
 }
 
 .ProfilePic {
@@ -31,7 +18,7 @@
 .ProfilePicMobile {
     border-radius: 8%;
     margin-top: 20px;
-    margin-left: 20%;
+    margin-left: 10%;
     flex: auto;
     height: 144px;
 }

@@ -49,21 +49,6 @@ const Sidebar = ({ theme, setTheme }) => {
         const targetElement = document.querySelector(`.${className}`);
         if (targetElement) {
             targetElement.scrollIntoView({ behavior: 'smooth' });
-
-            const handleAutomaticScrolling = () => {
-                let isScrolling;
-                clearTimeout(isScrolling);
-
-                isScrolling = setTimeout(() => {
-                    setActiveLink(className);
-                }, 1000); 
-            }
-
-            window.addEventListener('scroll', handleAutomaticScrolling);
-
-            setTimeout(() => {
-                window.removeEventListener('scroll', handleAutomaticScrolling);
-            }, 1500);
         }
     }
 

@@ -20,12 +20,12 @@ const HomeDetails = () => {
     }, []);
 
     return (
-        <div className='home'>
+        <div className='home md:pl-100 max-md:pl-20'>
             <br />
-            <img src={handsomeMan} alt="Michael Koch" className="ProfilePic max-md:hidden preload" />
-            <img src={longHandsomeMan} alt="Michael Koch" className="ProfilePicMobile md:hidden preload" />
-            <h1 className="PageHeader text-100 font-mono md:pl-100 pl-32 preloadHello">Hello</h1> 
-            <div className="PageDescription pl-80 font-bold md:pl-100 pr-5">
+            <img src={handsomeMan} alt="Michael Koch" className="ProfilePic max-md:hidden preload m-5" />
+            <img src={longHandsomeMan} alt="Michael Koch" className="ProfilePicMobile md:hidden preload text-center" />
+            <h1 className="text-100 font-mono preloadHello max-md:text-center">Hello</h1> 
+            <div className="PageDescription max-md:pl-40 font-bold pr-5">
                 <PageDescription />
             </div>
         </div>
