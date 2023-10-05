@@ -1,20 +1,26 @@
 import './index.scss'
 import { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import blackLogo from '../../assets/images/blackLogo.jpg';
 import lightLogo from '../../assets/images/mkLogoLight.png';
 import darkLogo from '../../assets/images/mkLogoDark.png';
-import highlightedLogo from '../../assets/images/highlightedLogo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faHome, faMoon, faSun, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faHome, faSun, faMoon, faUser } from '@fortawesome/free-solid-svg-icons';
 
 const Sidebar = ({ theme, setTheme }) => {
 
-    const [logo, setLogo] = useState(darkLogo);
-    const [hoverLogo, setHoverLogo] = useState(lightLogo);
+    const [logo, setLogo] = useState(lightLogo);
     const [activeLink, setActiveLink] = useState('home');
 
     const highlightLogo = () => {
+        if (theme === 'light') {
+            setLogo(darkLogo);
+        }
+        else {
+            setLogo(lightLogo);
+        }
+    }
+
+    const unhighlightLogo = () => {
         if (theme === 'light') {
             setLogo(lightLogo);
         }
@@ -23,13 +29,9 @@ const Sidebar = ({ theme, setTheme }) => {
         }
     }
 
-    const unhighlightLogo = () => {
-        if (theme === 'light') {
-            setLogo(darkLogo);
-        }
-        else {
-            setLogo(lightLogo);
-        }
+    const handleSwitchChange = () => {
+        setTheme(theme === 'light' ? 'dark' : 'light');
+        highlightLogo();
     }
 
     useEffect(() => {
@@ -69,8 +71,8 @@ const Sidebar = ({ theme, setTheme }) => {
             <Link to='/'>
                 <img className='logo' src={logo} alt='Logo' onMouseEnter={highlightLogo} onMouseLeave={unhighlightLogo} onClick={() => setTheme(theme === 'light' ? 'dark': 'light')} />
             </Link>
-            {/* <div className="flex justify-center mt-2 mb-4 pt-4" >
-                <input type="checkbox" className="checkbox" id="checkbox" onChange={() => setTheme(theme === 'light' ? 'dark' : 'light')} />
+            <div className="flex justify-center mt-2 mb-4 pt-4" >
+                <input type="checkbox" className="checkbox" id="checkbox" onChange={handleSwitchChange} />
                 <label htmlFor="checkbox" className="flexBetween w-16 h-8 bg-black rounded-2xl p-1 relative label cursor-pointer">
                 <div className="toggle">
                     <FontAwesomeIcon icon={faSun} className="fa-sun" />
@@ -78,7 +80,7 @@ const Sidebar = ({ theme, setTheme }) => {
                 </div>
                 <div className="w-6 h-6 absolute bg-white rounded-full ball" />
                 </label>
-            </div> */}
+            </div>
             <nav>
                 <NavLink exact className="NavLinkHome" onClick={handleIconClick('home')}>
                     <FontAwesomeIcon icon={faHome} color={activeLink === 'home' ? '#FFA500' : '#4d4d4e'} />
