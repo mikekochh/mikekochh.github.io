@@ -79,7 +79,7 @@ const AboutDetails = () => {
                 <div className="md:w-1/3 preload">
                     <VideoPlayer 
                         videoTitle="Portfolio" 
-                        videoSubtitle="Portfolio project for displaying experience, skillset, and projects that I have worked as a software developer." 
+                        videoSubtitle="Portfolio project for displaying experience, skillset and projects that I have worked on as a software developer." 
                         video={PortfolioVideo}
                         githubLink="https://github.com/mikekochh/portfolio"
                         languages={["ReactJS", "TailwindCSS"]}
@@ -101,7 +101,7 @@ const AboutDetails = () => {
                 <div className="md:w-1/3 preload">
                     <VideoPlayer 
                         videoTitle="Task Tracker" 
-                        videoSubtitle="Simple task tracking application where users are able add tasks, move tasks through different statuses, and delete them." 
+                        videoSubtitle="Simple task tracking application where users are able add tasks, move tasks through different statuses and delete them." 
                         video={TaskTrackerVideo}
                         githubLink="https://github.com/mikekochh/Task-Tracker"   
                         languages={["ReactJS", "Vanilla CSS"]} 

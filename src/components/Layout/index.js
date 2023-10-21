@@ -9,7 +9,7 @@ import './index.scss';
 
 const Layout = () => {
 
-    const [theme, setTheme] = useState('light');
+    const [theme, setTheme] = useState('dark');
 
     useEffect(() => {
         window.history.scrollRestoration = 'manual'

@@ -4,11 +4,11 @@ import { Link, NavLink } from 'react-router-dom';
 import lightLogo from '../../assets/images/mkLogoLight.png';
 import darkLogo from '../../assets/images/mkLogoDark.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faHome, faSun, faMoon, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faHome, faUser } from '@fortawesome/free-solid-svg-icons';
 
 const Sidebar = ({ theme, setTheme }) => {
 
-    const [logo, setLogo] = useState(lightLogo);
+    const [logo, setLogo] = useState(darkLogo);
     const [activeLink, setActiveLink] = useState('home');
 
     const highlightLogo = () => {
@@ -29,10 +29,10 @@ const Sidebar = ({ theme, setTheme }) => {
         }
     }
 
-    const handleSwitchChange = () => {
-        setTheme(theme === 'light' ? 'dark' : 'light');
-        highlightLogo();
-    }
+    // const handleSwitchChange = () => {
+    //     setTheme(theme === 'light' ? 'dark' : 'light');
+    //     highlightLogo();
+    // }
 
     useEffect(() => {
         const handleScroll = () => {
@@ -71,7 +71,7 @@ const Sidebar = ({ theme, setTheme }) => {
             <Link to='/'>
                 <img className='logo' src={logo} alt='Logo' onMouseEnter={highlightLogo} onMouseLeave={unhighlightLogo} onClick={() => setTheme(theme === 'light' ? 'dark': 'light')} />
             </Link>
-            <div className="flex justify-center mt-2 mb-4 pt-4" >
+            {/* <div className="flex justify-center mt-2 mb-4 pt-4" >
                 <input type="checkbox" className="checkbox" id="checkbox" onChange={handleSwitchChange} />
                 <label htmlFor="checkbox" className="flexBetween w-16 h-8 bg-black rounded-2xl p-1 relative label cursor-pointer">
                 <div className="toggle">
@@ -80,7 +80,7 @@ const Sidebar = ({ theme, setTheme }) => {
                 </div>
                 <div className="w-6 h-6 absolute bg-white rounded-full ball" />
                 </label>
-            </div>
+            </div> */}
             <nav>
                 <NavLink exact className="NavLinkHome" onClick={handleIconClick('home')}>
                     <FontAwesomeIcon icon={faHome} color={activeLink === 'home' ? '#FFA500' : '#4d4d4e'} />
