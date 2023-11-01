@@ -8,6 +8,8 @@ import { faEnvelope, faHome, faUser } from '@fortawesome/free-solid-svg-icons';
 
 const Sidebar = ({ theme, setTheme }) => {
 
+    // This really should look at what the theme is coming in, and set the logo accordingly
+
     const [logo, setLogo] = useState(darkLogo);
     const [activeLink, setActiveLink] = useState('home');
 

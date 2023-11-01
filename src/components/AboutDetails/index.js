@@ -58,19 +58,19 @@ const AboutDetails = () => {
                 Work Experience
             </p>
             <div className="preload">
-                <JobDetails companyName="JP Morgan & Chase" timeFrame="March 2023 - Present" companyID={1} companyURL={"https://www.jpmorgan.com/global"} />
+                <JobDetails companyName="JP Morgan & Chase | Software Engineer" timeFrame="March 2023 - Present" companyID={1} companyURL={"https://www.jpmorgan.com/global"} />
             </div>
             
             <br/>
             <br/>
             <div className="preload">
-                <JobDetails companyName="Center City Legal & Reporting, Inc." timeFrame="May 2021 - March 2023" companyID={2} companyURL={"https://www.cclrinc.com/"} />
+                <JobDetails companyName="CCLR | Software Developer" timeFrame="May 2021 - March 2023" companyID={2} companyURL={"https://www.cclrinc.com/"} />
             </div>
             
             <br/>
             <br/>
             <div className="preload">
-                <JobDetails companyName="Maxeta Technologies, Inc." timeFrame="June 2020 - August 2020" companyID={3} companyURL={"https://www.maxetatech.com/"} />
+                <JobDetails companyName="Maxeta Technologies | Web Development Intern" timeFrame="June 2020 - August 2020" companyID={3} companyURL={"https://www.maxetatech.com/"} />
             </div>
             <br/>
             <br/>

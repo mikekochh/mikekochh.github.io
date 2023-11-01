@@ -3,19 +3,25 @@ import ExperienceCard from '../ExperienceCard';
 export const JPMorganDetails = () => {
     return (
         <p className="text-12">
-            <p>• Engaged as a full-stack developer responsible for the enhancement and maintenance of enterprise web applications.<br/></p>
-            <p>• Leveraging a diverse array of technologies to proficiently develop, test, and deploy code.<br/></p>
-            <p>• Demonstrating attentiveness to stakeholder and project manager requirements for application development.<br/></p>
-            <p>• Delivering technical feature presentations to non-technical audiences.</p>
+            <p>• Assuming the position of Lead Front-End Developer by undertaking responsibility of overseeing all aspects related to user interface (UI) development<br/></p>
+            <p>• Upgrading our React user interface, enabling users to perform more precise and accurate data updates, as evidenced by improved data quality and user satisfaction<br/></p>
+            <p>• Taking responsibility for all testing processes of our application (unit, contract, and functional testing), resulting in a decrease in deployment issues and bugs reaching production environment.<br/></p>
+            <p>• Demonstrating attentiveness to stakeholder and project manager requirements for application development, and subsequently delivering technical feature presentations to non-technical audiences.</p>
             <div class="flex flex-wrap">
-                <ExperienceCard experience="ReactJS" />
-                <ExperienceCard experience="Spring Boot" />
+                <ExperienceCard experience="React" />
+                <ExperienceCard experience="Java" />
+                <ExperienceCard experience="SQL" />
+                <ExperienceCard experience="AWS" />
+                <ExperienceCard experience="Spinnaker" />
+                <ExperienceCard experience="Jules" />
+                <ExperienceCard experience="Jenkins" />
                 <ExperienceCard experience="Agile" />
                 <ExperienceCard experience="Jira" />
+                <ExperienceCard experience="Junit" />
                 <ExperienceCard experience="TDD" />
-                <ExperienceCard experience="SQL" />
+                <ExperienceCard experience="Git" />
+                <ExperienceCard experience="APIs" />
                 <ExperienceCard experience="CI/CD" />
-                <ExperienceCard experience="AWS" />
             </div>
         </p>
     );
@@ -24,8 +30,10 @@ export const JPMorganDetails = () => {
 export const CCLRDetails = () => {
     return (
         <p className="text-12">
-            <p>• Worked on a program for a legal records company that automates various tasks and streamlines development projects to successful completion.<br/></p>
-            <p>• Lead multiple development projects to successful completion, while elevating the user's experience through attentive strategic decision making, design, and development.<br/></p>
+            <p>• Managing the automation and interconnection of multiple departments by facilitating streamlined communication and workflow automation, resulting in enhanced productivity and reduction of human errors.<br/></p>
+            <p>• Expanding revenue streams and diverisfying business lines by researching hand-serving automation and collaborating with relevant departments to successfully implement it into our application. <br/></p>
+            <p>• Brainstorming, collaborating, and defining all business requirements with department heads and management on new software implementations.<br/></p>
+            <p>• Developing, managing, and executing end-to-end software implementation projects, followed by effectively presenting new software to non-technical audiences. <br/></p>
             <div class="flex flex-wrap">
                 <ExperienceCard experience="JavaScript" />
                 <ExperienceCard experience="ASP.NET" />
@@ -41,12 +49,12 @@ export const CCLRDetails = () => {
 export const MaxetaDetails = () => {
     return (
         <p className="text-12">
-            <p>• Worked on web applications created for a nuclear powerplant that automates day-to-day tasks and training processes.<br/></p>
-            <p>• Worked in a professional development team for the first time and helped solve client's business problems with software solutions.<br/> </p>
+            <p>• Working and communicating with clients to outline business problems and tedious tasks to find ways to automate these processes using software solutions.<br/></p>
+            <p>• Helping develop an application that automates day-to-day tasks, training processes and communication for our client, a nuclear powerplant.<br/> </p>
+            <p>• Providing solutions that resulted in greater efficiency and productivity for client's employees as well as reducing lost tools and items within the powerplant.<br/> </p>
             <div class="flex flex-wrap">
                 <ExperienceCard experience="TypeScript" />
                 <ExperienceCard experience="Angular" />
-                <ExperienceCard experience="Java" />
             </div>
         </p>
     );

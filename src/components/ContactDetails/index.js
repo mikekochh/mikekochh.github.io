@@ -56,7 +56,7 @@ const ContactDetails = () => {
                 <div>
                     <ul>
                         <li>
-                            <a href='https://www.linkedin.com/in/michael-koch-6378831a2/' target='_blank' rel="noreferrer">
+                            <a href='https://www.linkedin.com/in/michaelgkochh/' target='_blank' rel="noreferrer">
                             <FontAwesomeIcon icon={faLinkedin} color="#4d4d4e" className="icon" />
                             </a>
                         </li>
