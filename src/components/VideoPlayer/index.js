@@ -1,9 +1,11 @@
 import ExperienceCard from "../ExperienceCard";
 
-const VideoCard = ({ video, videoTitle, videoSubtitle, githubLink, languages }) => { 
+const VideoCard = ({ video, videoTitle, videoSubtitle, githubLink, languages, websiteLink }) => { 
     return (
         <div className="project-card p-4 m-2 rounded-lg">
-            <h1 className="text-30">{videoTitle}</h1><br/>
+            <a href={websiteLink} target="_blank" rel="noreferrer">
+                <div>
+                <h1 className="text-30">{videoTitle}</h1><br/>
             <h2 className="text-12">{videoSubtitle}</h2>
             <br />
             <div className="flex">
@@ -13,11 +15,13 @@ const VideoCard = ({ video, videoTitle, videoSubtitle, githubLink, languages }) 
                     </video>
                 </div>
                 <div>
+                {!githubLink ? null : (
                     <a href={githubLink} target="_blank" rel="noreferrer">
                         <button className="bg-gray-400 hover:bg-gray-500 text-white font-bold py-2 px-4 rounded">
                             GitHub
                         </button>
                     </a>
+                )}
                 </div>
             </div>
             <div class="flex flex-wrap flex-row">
@@ -25,6 +29,9 @@ const VideoCard = ({ video, videoTitle, videoSubtitle, githubLink, languages }) 
                     <ExperienceCard experience={language} />
                 ))}
             </div>
+                </div>
+            </a>
+
         </div>
     );
 }

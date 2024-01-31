@@ -1,6 +1,7 @@
 import PortfolioVideo from '../../assets/videos/Portfolio-Demo.mp4';
 import EstateVideo from '../../assets/videos/Demo-Desktop-Estate.mp4';
 import TaskTrackerVideo from '../../assets/videos/Task-Tracker-Demo.mp4';
+import DreamOraclesVideo from '../../assets/videos/Dream-Oracles.mp4';
 import Resume from '../../assets/resume/Michael-Koch-Resume.pdf';
 import './index.scss'
 import { JPMorganDetails, CCLRDetails, MaxetaDetails } from './CompanyDetails';
@@ -75,7 +76,16 @@ const AboutDetails = () => {
             <br/>
             <br/>
             <h1 className="text-60 mt-10 text-center md:text-left preload">Projects</h1><br />
-            <div className="md:flex justify-evenly md:flex-3 md:pr-16 md:flex-wrap">            
+            <div className="md:flex justify-evenly md:flex-3 md:pr-16 md:flex-wrap">    
+                <div className="md:w-1/3 preload">
+                    <VideoPlayer 
+                        websiteLink="https://www.dreamoracles.co"
+                        videoTitle="Dream Oracles" 
+                        videoSubtitle="Website using AI to generate different dream interpretations based off user input and character selection" 
+                        video={DreamOraclesVideo}  
+                        languages={["NextJS 14", "Tailwind CSS", "MongoDB"]} 
+                    />
+                </div>         
                 <div className="md:w-1/3 preload">
                     <VideoPlayer 
                         videoTitle="Portfolio" 
@@ -106,7 +116,7 @@ const AboutDetails = () => {
                         githubLink="https://github.com/mikekochh/Task-Tracker"   
                         languages={["ReactJS", "Vanilla CSS"]} 
                     />
-                </div>    
+                </div>
             </div>
             <div className="text-center mt-10 preload">
                 <a href={Resume} download="Michael-Koch-Resume">
