@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.d98c28e4.css",
-    "main.js": "/static/js/main.136848be.js",
+    "main.js": "/static/js/main.0004cf8c.js",
     "static/js/787.a2cb61a6.chunk.js": "/static/js/787.a2cb61a6.chunk.js",
     "static/media/Demo-Desktop-Estate.mp4": "/static/media/Demo-Desktop-Estate.b47f7ab3008d0315a685.mp4",
     "static/media/Dream-Oracles.mp4": "/static/media/Dream-Oracles.6ce2cfe86c29b811ce9b.mp4",
@@ -9,19 +9,19 @@
     "static/media/Task-Tracker-Demo.mp4": "/static/media/Task-Tracker-Demo.98aa4aec62a583439594.mp4",
     "static/media/longHandsomeMan.jpg": "/static/media/longHandsomeMan.311853dad53688fae380.jpg",
     "static/media/handsomeMan.jpg": "/static/media/handsomeMan.4678fdac3bd70ee02c29.jpg",
-    "static/media/Michael-Koch-Resume.pdf": "/static/media/Michael-Koch-Resume.a3886bb7a0d20aefdfdf.pdf",
     "static/media/mkLogoDark.png": "/static/media/mkLogoDark.7fa0aefc863b497a97c0.png",
+    "static/media/Michael-Koch-Resume.pdf": "/static/media/Michael-Koch-Resume.d191f83972ce1511f8e5.pdf",
     "static/media/mkLogoLight.png": "/static/media/mkLogoLight.ecd85d8b99e4c7dd7d46.png",
     "index.html": "/index.html",
     "static/media/CoolveticaRg-Regular.woff2": "/static/media/CoolveticaRg-Regular.31d6cfe0d16ae931b73c.woff2",
     "static/media/LaBelleAurore.woff2": "/static/media/LaBelleAurore.31d6cfe0d16ae931b73c.woff2",
     "static/media/helvetica-neu.ttf": "/static/media/helvetica-neu.31d6cfe0d16ae931b73c.ttf",
     "main.d98c28e4.css.map": "/static/css/main.d98c28e4.css.map",
-    "main.136848be.js.map": "/static/js/main.136848be.js.map",
+    "main.0004cf8c.js.map": "/static/js/main.0004cf8c.js.map",
     "787.a2cb61a6.chunk.js.map": "/static/js/787.a2cb61a6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d98c28e4.css",
-    "static/js/main.136848be.js"
+    "static/js/main.0004cf8c.js"
   ]
 }
