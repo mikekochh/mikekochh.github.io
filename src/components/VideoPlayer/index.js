@@ -1,37 +1,36 @@
 import ExperienceCard from "../ExperienceCard";
 
-const VideoCard = ({ video, videoTitle, videoSubtitle, githubLink, languages, websiteLink }) => { 
+const VideoCard = ({ video, videoTitle, videoSubtitle, githubLink, languages, websiteLink }) => {
     return (
-        <div className="project-card p-4 m-2 rounded-lg">
+        <div className="rounded-xl border border-gray-200 p-3 shadow-lg job-details relative">
             <a href={websiteLink} target="_blank" rel="noreferrer">
-                <div>
-                <h1 className="text-30">{videoTitle}</h1><br/>
-            <h2 className="text-12">{videoSubtitle}</h2>
-            <br />
-            <div className="flex">
-                <div className="flex-1 mr-4 rounded-lg">
-                    <video autoPlay muted loop playsInline title="testing" width="300" height="250">
+                {/* Video at the top and full width */}
+                <div className="relative">
+                    <video className="w-full rounded-t-xl" autoPlay muted loop playsInline title={videoTitle}>
                         <source src={video} type="video/mp4" />
                     </video>
+                    {/* Banner for GitHub */}
+                    {githubLink && (
+                        <a href={githubLink} target="_blank" rel="noreferrer" className="absolute top-2 right-2">
+                            <div className="bg-gray-400 hover:bg-gray-500 text-white font-bold py-1 px-2 rounded">
+                                View Github
+                            </div>
+                        </a>
+                    )}
                 </div>
-                <div>
-                {!githubLink ? null : (
-                    <a href={githubLink} target="_blank" rel="noreferrer">
-                        <button className="bg-gray-400 hover:bg-gray-500 text-white font-bold py-2 px-4 rounded">
-                            GitHub
-                        </button>
-                    </a>
-                )}
-                </div>
-            </div>
-            <div class="flex flex-wrap flex-row">
-                {languages.map((language) => (
-                    <ExperienceCard experience={language} />
-                ))}
-            </div>
+
+                <div className="p-3">
+                    <h1 className="golden-ratio-2 font-bold">{videoTitle}</h1>
+                    <h2 className="golden-ratio-1">{videoSubtitle}</h2>
+                    <br />
+
+                    <div className="flex flex-wrap flex-row mt-3">
+                        {languages.map((language, index) => (
+                            <ExperienceCard key={index} experience={language} />
+                        ))}
+                    </div>
                 </div>
             </a>
-
         </div>
     );
 }

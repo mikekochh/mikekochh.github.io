@@ -28,12 +28,11 @@ const ContactDetails = () => {
 
     return (
         <div className="ml-24 md:ml-40 font-mono font-bold contact">
-            <h1 className="mt-40 md:text-60 text-40 text-center preload">Contact Me</h1>
-            <div className="mt-5 text-center preload">
+            <h1 className="mt-40 md:text-60 text-40 text-center">Contact Me</h1>
+            <div className="mt-5 text-center">
                 <p className="text-center text-15 md:w-1/2 pl-4 pr-4 mx-auto contactMeWidth">
-                    I am always seeking freelance opportunities and also looking to cultivate collaborative business connections.
-                    If you require any further information or assistance please do not hesistate to contact me, and I
-                    will respond as soon as I can. Thank you!</p><br/>
+                    If you have a project in mind or you are curious to see how technology could help your business grow, feel free to get in touch.
+                </p><br/>
                 <div className="text-center mx-auto w-8/12">
                     <form ref={refForm} onSubmit={sendEmail} className="flex flex-column">
                         <div className="form-row">

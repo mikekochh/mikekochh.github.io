@@ -126,43 +126,6 @@
     }
 }
 
-.toggle {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    border-radius: 20px;
-    position: relative;
-}
-
-.fa-sun {
-    color: yellow;
-    font-size: 13px;
-}
-
-.fa-moon {
-    color: pink;
-    font-size: 13px;
-    padding-right: 2px;
-}
-
-.ball {
-    top: 2px;
-    left: 2px;
-    transition: transform 0.2s linear;
-}
-
-.checkbox:checked+.label .ball {
-    transform: translateX(20px);
-}
-
-.checkbox {
-    opacity: 0;
-    position: absolute;
-}
-
 ul {
     list-style: none;
     padding: 0;

@@ -1,36 +1,4 @@
-@media(prefers-reduced-motion) {
-    .preload, .postload{
-        transition: none !important;
-    }
+.layout-container {
+    padding-top: 60px; // Adjust this value based on the height of your navbar
 }
 
-.preload {
-    opacity: 0;
-    transform: translateY(100%);
-}
-
-.postload {
-    opacity: 1;
-    transition: all 2s;
-}
-
-.preloadName {
-    opacity: 0;
-}
-
-.preloadWelcome {
-    opacity: 0;
-}
-
-.preloadHello {
-    opacity: 0;
-}
-
-$numberOfItems: 20; // Set the number of items you want to generate rules for
-$delayIncrement: 200ms; // Set the delay increment
-
-@for $i from 0 through $numberOfItems - 1 {
-  .delayedItemTitle:nth-child(#{$i}) {
-    transition-delay: #{($i + 1) * $delayIncrement};
-  }
-}

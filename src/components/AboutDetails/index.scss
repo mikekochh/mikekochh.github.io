@@ -1,7 +1,9 @@
-$total-items: 11; // Total number of items
-
-@for $i from 1 through $total-items {
-  .delayedItemJob:nth-child(#{$i}) {
-    transition-delay: #{$i * 100ms};
-  }
+.job-details {
+  transition: transform 0.5s, background-color 0.2s;
 }
+
+.job-details:hover {
+  transform: translateY(-3px);
+  background-color: #F0FFFF;
+}
+

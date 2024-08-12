@@ -1,8 +1,6 @@
 import './index.scss'
 import { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import lightLogo from '../../assets/images/mkLogoLight.png';
-import darkLogo from '../../assets/images/mkLogoDark.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faHome, faUser } from '@fortawesome/free-solid-svg-icons';
 
@@ -73,16 +71,6 @@ const Sidebar = ({ theme, setTheme }) => {
             <Link to='/'>
                 <img className='logo' src={logo} alt='Logo' onMouseEnter={highlightLogo} onMouseLeave={unhighlightLogo} onClick={() => setTheme(theme === 'light' ? 'dark': 'light')} />
             </Link>
-            {/* <div className="flex justify-center mt-2 mb-4 pt-4" >
-                <input type="checkbox" className="checkbox" id="checkbox" onChange={handleSwitchChange} />
-                <label htmlFor="checkbox" className="flexBetween w-16 h-8 bg-black rounded-2xl p-1 relative label cursor-pointer">
-                <div className="toggle">
-                    <FontAwesomeIcon icon={faSun} className="fa-sun" />
-                    <FontAwesomeIcon icon={faMoon} className="fa-moon" />
-                </div>
-                <div className="w-6 h-6 absolute bg-white rounded-full ball" />
-                </label>
-            </div> */}
             <nav>
                 <NavLink exact className="NavLinkHome" onClick={handleIconClick('home')}>
                     <FontAwesomeIcon icon={faHome} color={activeLink === 'home' ? '#FFA500' : '#4d4d4e'} />

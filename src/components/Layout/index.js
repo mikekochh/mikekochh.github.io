@@ -1,46 +1,30 @@
-import Sidebar from '../Sidebar';
+import Navbar from '../Navbar';
 import HomeDetails from '../HomeDetails';
 import AboutDetails from '../AboutDetails';
 import ContactDetails from '../ContactDetails';
-import { ThemeContext } from '../../context/theme-context';
-import { useEffect, useState } from 'react';
-import '../../styles/theme-variables.scss'
+import { useEffect } from 'react';
 import './index.scss';
 
 const Layout = () => {
 
-    const [theme, setTheme] = useState('dark');
-
     useEffect(() => {
-        window.history.scrollRestoration = 'manual'
+        window.history.scrollRestoration = 'manual';
     }, []);
 
-    useEffect(() => {
-        const displayComponents = () => {
-            const hiddenElements = document.querySelectorAll('.preload');
-            hiddenElements.forEach((element) => {
-                element.classList.remove('preload');
-                element.classList.add('postload');
-            });
+    const handleIconClick = (className) => () => { 
+        const targetElement = document.querySelector(`.${className}`);
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
         }
-
-        setTimeout(() => {
-            displayComponents();
-        }, 4000);
-    })
+    }
 
     return (
-        <ThemeContext.Provider value={{ theme, setTheme }}>
-            <div className={`theme-${theme}`}>
-            <div>
-                <Sidebar theme={theme} setTheme={setTheme}/>
-            </div>
-                <HomeDetails />
-                <AboutDetails />
-                <ContactDetails />
-            </div>
-        </ThemeContext.Provider>
-
+        <div className="layout-container"> {/* Add the class here */}
+            <Navbar handleIconClick={handleIconClick} />
+            <HomeDetails handleIconClick={handleIconClick} />
+            <AboutDetails handleIconClick={handleIconClick} />
+            <ContactDetails />
+        </div>
     );
 }
 
