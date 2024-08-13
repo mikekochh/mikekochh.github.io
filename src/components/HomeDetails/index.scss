@@ -2,33 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-.PageDescription {
-    font-size: 24px;
-    font-family: monospace;
-}
-
-.ProfilePic {
-    float: right;
-    max-width: 30%;
-    margin-right: 30px;
-    border-radius: 10%;
-    margin-top: 30px;
-}
-
-.ProfilePicMobile {
-    border-radius: 8%;
-    margin-top: 20px;
-    margin-left: 10%;
-    flex: auto;
-    height: 144px;
-}
-
 .content-section {
-    width: 66.67%; /* Two-thirds of the full width */
-    margin: 0 auto; /* Center the content */
-    padding: 20px; /* Optional: Add some padding for better aesthetics */
-    box-sizing: border-box; /* Ensures padding does not affect width */
-    text-align: center; /* Center text in the section */
+    width: 66.67%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
 }
 
 .home {

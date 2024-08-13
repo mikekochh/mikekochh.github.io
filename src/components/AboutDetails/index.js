@@ -9,9 +9,6 @@ import VideoPlayer from '../VideoPlayer';
 
 const JobDetails = ({companyName, timeFrame, companyID, companyURL}) => {
 
-    console.log("company name: ", companyName);
-    console.log("companyID: ", companyID);
-
     const companyDetail = (companyID) => {
         switch(companyID) {
             case 1:
@@ -36,9 +33,6 @@ const JobDetails = ({companyName, timeFrame, companyID, companyURL}) => {
                     <div>
                         <p className="golden-ratio-2">{companyName}</p>
                     </div>
-                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-8 rounded">
-                        Hire Me
-                    </button>
                 </a>
                 <p className="golden-ratio-1 font-bold">{timeFrame}</p>
                 <div className="golden-ratio-1">
@@ -63,13 +57,12 @@ const JobDetails = ({companyName, timeFrame, companyID, companyURL}) => {
 
 const AboutDetails = ({ handleIconClick }) => {
     return (
-        <div className="ml-24 md:ml-40 mb-100 about md:pl-40">
-            <div className="md:mt-40 mt-10 text-center golden-ratio-4">Projects</div>
-            <div className="md:w-2/3 md:mx-auto text-center md:text-left">
+        <div className="about">
+            <div className="md:w-2/3 md:mx-auto text-center md:text-left mt-20">
             <div className="business-projects-section">
                 <div className="flex items-center justify-between">
                     <div>
-                        <h1 className="golden-ratio-3 font-bold">Business Projects</h1>
+                        <h1 className="golden-ratio-3 font-bold">Landing Pages</h1>
                         <h2 className="golden-ratio-1">Creating web pages that facilitate business growth and get customers to take action</h2>
                     </div>
                     <button 
@@ -178,11 +171,23 @@ const AboutDetails = ({ handleIconClick }) => {
                     </div>
                 </div>
             </div>
+            <div className="flex items-center justify-between mt-20">
+                <div>
+                    <h1 className="golden-ratio-3 font-bold">Professional Experience</h1>
+                    <h2 className="golden-ratio-1">Leveraging my expertise to drive company growth and create cutting-edge digital products</h2>
+                </div>
+                <button 
+                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-4 golden-ratio-1 shadow-lg"
+                    onClick={handleIconClick('contact')}
+                >
+                    Hire Me
+                </button>
             </div>
+        </div>
 
-            <div className="md:mt-40 mt-10 text-center golden-ratio-4 mb-15">Work Experience</div>
+
                 <div className="md:w-2/3 md:mx-auto text-center md:text-left">
-                    <div className="work-experience-section space-y-16">
+                    <div className="work-experience-section space-y-16 mt-8">
                         <div>
                             <JobDetails companyName="Freelance (Self-Employed) | Software Developer" timeFrame="March 2024 - Present" companyID={1} companyURL={"https://www.jpmorgan.com/global"} />
                         </div>
