@@ -1,4 +1,4 @@
-import PortfolioVideo from '../../assets/videos/Portfolio-Demo.mp4';
+import PortfolioVideo from '../../assets/videos/PortfolioDemo.mp4';
 import EstateVideo from '../../assets/videos/Demo-Desktop-Estate.mp4';
 import TaskTrackerVideo from '../../assets/videos/Task-Tracker-Demo.mp4';
 import DreamOraclesVideo from '../../assets/videos/DreamOraclesDemo.mp4'
@@ -181,7 +181,6 @@ const AboutDetails = ({ handleIconClick, isMobile }) => {
                             companyName="Freelance (Self-Employed) | Software Developer" 
                             timeFrame="March 2024 - Present" 
                             companyID={1} 
-                            companyURL={"https://www.jpmorgan.com/global"} 
                             isMobile={isMobile}    
                         />
                     </div>
