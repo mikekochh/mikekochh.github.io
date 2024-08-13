@@ -1,11 +1,12 @@
 import './index.scss';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import logo from "../../assets/images/blackLogo.jpg";
+import menuIcon from "../../assets/images/menu.png";
 
 const Navbar = ({ handleIconClick, isMobile }) => {
-
     const [activeLink, setActiveLink] = useState('home');
+    const [menuOpen, setMenuOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -14,8 +15,7 @@ const Navbar = ({ handleIconClick, isMobile }) => {
             const contactElement = document.querySelector('.contact');
             const scrollTop = window.scrollY;
 
-            // Adjust for the navbar height
-            const navbarHeight = 500;
+            const navbarHeight = 70;
 
             if (homeElement && scrollTop < homeElement.offsetTop + homeElement.offsetHeight - navbarHeight) {
                 setActiveLink('home');
@@ -41,38 +41,79 @@ const Navbar = ({ handleIconClick, isMobile }) => {
         };
     }, []);
 
+    const toggleMenu = useCallback(() => {
+        console.log("toggleMenu running...");
+        setMenuOpen((prevMenuOpen) => !prevMenuOpen);
+    }, []);
+
+    const handleMobileMenuClick = (pageSection) => {
+        console.log(`Navigating to: ${pageSection}`);
+        toggleMenu();
+        handleIconClick(pageSection)();
+    };
+
     return (
         <div className='nav-bar'>
             <Link to='/' className='logo-container'>
-                <img className='logo' src={logo} alt='Logo'/>
+                <img className='logo' src={logo} alt='Logo' />
                 <p className='company-name hidden md:flex'>Michael Koch Solutions</p>
             </Link>
-            <nav>
-                <NavLink 
-                    exact 
-                    className={`nav-link ${activeLink === 'home' ? 'active' : ''}`} 
-                    onClick={handleIconClick('home')}
-                >
-                    Home
-                </NavLink>
-                <NavLink 
-                    exact 
-                    className={`nav-link ${activeLink === 'about' ? 'active' : ''}`} 
-                    onClick={handleIconClick('about')}
-                >
-                    About
-                </NavLink>
-                <NavLink 
-                    exact 
-                    className={`nav-link ${activeLink === 'contact' ? 'active' : ''}`} 
-                    onClick={handleIconClick('contact')}
-                >
-                    Contact
-                </NavLink>
-            </nav>
+            {isMobile ? (
+                <div className='menu-icon' onClick={toggleMenu}>
+                    <img src={menuIcon} alt='Menu' width={40} height={40} />
+                </div>
+            ) : (
+                <nav>
+                    <NavLink
+                        exact
+                        className={`nav-link ${activeLink === 'home' ? 'active' : ''}`}
+                        onClick={handleIconClick('home')}
+                    >
+                        Home
+                    </NavLink>
+                    <NavLink
+                        exact
+                        className={`nav-link ${activeLink === 'about' ? 'active' : ''}`}
+                        onClick={handleIconClick('about')}
+                    >
+                        About
+                    </NavLink>
+                    <NavLink
+                        exact
+                        className={`nav-link ${activeLink === 'contact' ? 'active' : ''}`}
+                        onClick={handleIconClick('contact')}
+                    >
+                        Contact
+                    </NavLink>
+                </nav>
+            )}
+            {menuOpen && isMobile && (
+                <div className='mobile-menu'>
+                    <NavLink
+                        exact
+                        className={`nav-link ${activeLink === 'home' ? 'active' : ''}`}
+                        onClick={() => handleMobileMenuClick('home')}
+                    >
+                        Home
+                    </NavLink>
+                    <NavLink
+                        exact
+                        className={`nav-link ${activeLink === 'about' ? 'active' : ''}`}
+                        onClick={() => handleMobileMenuClick('about')}
+                    >
+                        About
+                    </NavLink>
+                    <NavLink
+                        exact
+                        className={`nav-link ${activeLink === 'contact' ? 'active' : ''}`}
+                        onClick={() => handleMobileMenuClick('contact')}
+                    >
+                        Contact
+                    </NavLink>
+                </div>
+            )}
         </div>
     );
-
 }
 
 export default Navbar;

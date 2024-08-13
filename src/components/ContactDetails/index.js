@@ -2,7 +2,7 @@ import './index.scss';
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedin, faXTwitter, faTelegram } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedin, faXTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 const ContactDetails = ({ isMobile }) => { 
 
@@ -27,14 +27,14 @@ const ContactDetails = ({ isMobile }) => {
     }   
 
     return (
-        <div className="contact-container mt-16 mb-20">
-            <div className="contact font-mono font-bold mt-10 rounded-3xl w-2/3">
-                <h1 className="golden-ratio-4 text-center">Contact Me</h1>
-                <div className="text-center">
-                    <p className="text-center golden-ratio-1 md:w-2/3 mx-auto">
-                        If you have a project in mind or you are curious to see how technology could help your business grow, feel free to get in touch. Just leave your name, email, and a note below and I will get back to you as soon as possible.
+        <div className="mt-16 mb-10">
+            <div className="contact mt-10 md:w-2/3">
+                <h1 className="golden-ratio-3 text-center font-bold">Contact Me</h1>
+                <div className="text-center p-6">
+                    <p className="golden-ratio-1 md:w-2/3 md:mx-auto">
+                        If you have a project in mind, or you are curious to see how technology could help your business grow, or you have a job opportunity, feel free to get in touch. Just leave your name, email, and a message below and I will get back to you as soon as possible.
                     </p><br/>
-                    <div className="text-center mx-auto w-8/12">
+                    <div className="mx-auto md:w-8/12">
                         <form ref={refForm} onSubmit={sendEmail} className="flex flex-column">
                             <div className="form-row flex space-x-4">
                                 <input type="text" name="first_name" placeholder="First Name" required className="email-inputs"/>
@@ -49,7 +49,7 @@ const ContactDetails = ({ isMobile }) => {
                             <div className="form-row">
                                 <textarea placeholder="Message" name="message" rows={4} required className="email-inputs mt-3" />
                             </div>
-                            <div className="mt-11">
+                            <div className="mt-11 mb-11">
                                 <input type="submit" value="Send" className="text-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-4 golden-ratio-1 shadow-lg" />
                             </div>
                         </form>
@@ -72,8 +72,8 @@ const ContactDetails = ({ isMobile }) => {
                                 </a>
                             </li>
                             <li>
-                                <a href='https://t.me/mikekochh' target='_blank' rel='noreferrer'>
-                                    <FontAwesomeIcon icon={faTelegram} color="#4d4d4e" className="icon" />
+                                <a href='https://www.instagram.com/mikekochh/' target='_blank' rel='noreferrer'>
+                                    <FontAwesomeIcon icon={faInstagram} color="#4d4d4e" className="icon" />
                                 </a>
                             </li>
                         </ul>
