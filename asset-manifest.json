@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.d98c28e4.css",
-    "main.js": "/static/js/main.0004cf8c.js",
-    "static/js/787.a2cb61a6.chunk.js": "/static/js/787.a2cb61a6.chunk.js",
+    "main.css": "/static/css/main.6447c814.css",
+    "main.js": "/static/js/main.3f934743.js",
+    "static/js/787.cf482a7c.chunk.js": "/static/js/787.cf482a7c.chunk.js",
     "static/media/Demo-Desktop-Estate.mp4": "/static/media/Demo-Desktop-Estate.b47f7ab3008d0315a685.mp4",
-    "static/media/Dream-Oracles.mp4": "/static/media/Dream-Oracles.6ce2cfe86c29b811ce9b.mp4",
-    "static/media/Portfolio-Demo.mp4": "/static/media/Portfolio-Demo.985c44f709f63f46a0bc.mp4",
-    "static/media/Task-Tracker-Demo.mp4": "/static/media/Task-Tracker-Demo.98aa4aec62a583439594.mp4",
-    "static/media/longHandsomeMan.jpg": "/static/media/longHandsomeMan.311853dad53688fae380.jpg",
+    "static/media/MywallflowerDemo.mp4": "/static/media/MywallflowerDemo.30b5cbbca20fcbe3fa78.mp4",
+    "static/media/DreamOraclesDemo.mp4": "/static/media/DreamOraclesDemo.b00d7f2dbfe8829a7650.mp4",
+    "static/media/PortfolioDemo.mp4": "/static/media/PortfolioDemo.e7747fdb21a1a02b8574.mp4",
+    "static/media/DreamOraclesLandingPageDemo.mp4": "/static/media/DreamOraclesLandingPageDemo.ef9c760431d4c6b4522b.mp4",
+    "static/media/banner.png": "/static/media/banner.48df2ad5fb05e6715583.png",
     "static/media/handsomeMan.jpg": "/static/media/handsomeMan.4678fdac3bd70ee02c29.jpg",
-    "static/media/mkLogoDark.png": "/static/media/mkLogoDark.7fa0aefc863b497a97c0.png",
-    "static/media/Michael-Koch-Resume.pdf": "/static/media/Michael-Koch-Resume.d191f83972ce1511f8e5.pdf",
-    "static/media/mkLogoLight.png": "/static/media/mkLogoLight.ecd85d8b99e4c7dd7d46.png",
+    "static/media/Michael-Koch-Resume.pdf": "/static/media/Michael-Koch-Resume.ea5d032ddd72b7a7da5c.pdf",
+    "static/media/blackLogo.jpg": "/static/media/blackLogo.f5d4cb684b6965c2348a.jpg",
     "index.html": "/index.html",
     "static/media/CoolveticaRg-Regular.woff2": "/static/media/CoolveticaRg-Regular.31d6cfe0d16ae931b73c.woff2",
     "static/media/LaBelleAurore.woff2": "/static/media/LaBelleAurore.31d6cfe0d16ae931b73c.woff2",
     "static/media/helvetica-neu.ttf": "/static/media/helvetica-neu.31d6cfe0d16ae931b73c.ttf",
-    "main.d98c28e4.css.map": "/static/css/main.d98c28e4.css.map",
-    "main.0004cf8c.js.map": "/static/js/main.0004cf8c.js.map",
-    "787.a2cb61a6.chunk.js.map": "/static/js/787.a2cb61a6.chunk.js.map"
+    "main.6447c814.css.map": "/static/css/main.6447c814.css.map",
+    "main.3f934743.js.map": "/static/js/main.3f934743.js.map",
+    "787.cf482a7c.chunk.js.map": "/static/js/787.cf482a7c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d98c28e4.css",
-    "static/js/main.0004cf8c.js"
+    "static/css/main.6447c814.css",
+    "static/js/main.3f934743.js"
   ]
 }
