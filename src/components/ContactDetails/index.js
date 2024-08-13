@@ -4,7 +4,7 @@ import emailjs from '@emailjs/browser';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin, faXTwitter, faTelegram } from '@fortawesome/free-brands-svg-icons';
 
-const ContactDetails = () => { 
+const ContactDetails = ({ isMobile }) => { 
 
     const refForm = useRef(null);
 
@@ -28,10 +28,10 @@ const ContactDetails = () => {
 
     return (
         <div className="contact-container mt-16 mb-20">
-            <div className="contact font-mono font-bold mt-10 bg-dark-gray rounded-3xl w-2/3">
-                <h1 className="golden-ratio-4 text-center text-white">Contact Me</h1>
+            <div className="contact font-mono font-bold mt-10 rounded-3xl w-2/3">
+                <h1 className="golden-ratio-4 text-center">Contact Me</h1>
                 <div className="text-center">
-                    <p className="text-center text-15 md:w-1/2 pl-4 pr-4 mx-auto text-white">
+                    <p className="text-center golden-ratio-1 md:w-2/3 mx-auto">
                         If you have a project in mind or you are curious to see how technology could help your business grow, feel free to get in touch. Just leave your name, email, and a note below and I will get back to you as soon as possible.
                     </p><br/>
                     <div className="text-center mx-auto w-8/12">
@@ -49,8 +49,8 @@ const ContactDetails = () => {
                             <div className="form-row">
                                 <textarea placeholder="Message" name="message" rows={4} required className="email-inputs mt-3" />
                             </div>
-                            <div className="form-row">
-                                <input type="submit" value="SEND" className="send-button cursor-pointer mt-3 rounded-lg" />
+                            <div className="mt-11">
+                                <input type="submit" value="Send" className="text-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-4 golden-ratio-1 shadow-lg" />
                             </div>
                         </form>
                     </div>

@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import logo from "../../assets/images/blackLogo.jpg";
 
-const Navbar = ({ handleIconClick }) => {
+const Navbar = ({ handleIconClick, isMobile }) => {
 
     const [activeLink, setActiveLink] = useState('home');
 
@@ -14,16 +14,25 @@ const Navbar = ({ handleIconClick }) => {
             const contactElement = document.querySelector('.contact');
             const scrollTop = window.scrollY;
 
-            if (homeElement && scrollTop < homeElement.offsetTop + homeElement.offsetHeight) {
+            // Adjust for the navbar height
+            const navbarHeight = 500;
+
+            if (homeElement && scrollTop < homeElement.offsetTop + homeElement.offsetHeight - navbarHeight) {
                 setActiveLink('home');
-            }
-            else if (aboutElement && scrollTop >= aboutElement.offsetTop - 1 && scrollTop < aboutElement.offsetTop + aboutElement.offsetHeight) {
+            } else if (
+                aboutElement &&
+                scrollTop >= aboutElement.offsetTop - navbarHeight &&
+                scrollTop < aboutElement.offsetTop + aboutElement.offsetHeight - navbarHeight
+            ) {
                 setActiveLink('about');
-            }
-            if (contactElement && scrollTop + window.innerHeight > document.documentElement.scrollHeight - 1) {
+            } else if (
+                contactElement &&
+                scrollTop >= contactElement.offsetTop - navbarHeight &&
+                scrollTop < contactElement.offsetTop + contactElement.offsetHeight - navbarHeight
+            ) {
                 setActiveLink('contact');
             }
-        }
+        };
 
         window.addEventListener('scroll', handleScroll);
 
@@ -36,7 +45,7 @@ const Navbar = ({ handleIconClick }) => {
         <div className='nav-bar'>
             <Link to='/' className='logo-container'>
                 <img className='logo' src={logo} alt='Logo'/>
-                <p className='company-name'>Michael Koch Solutions</p>
+                <p className='company-name hidden md:flex'>Michael Koch Solutions</p>
             </Link>
             <nav>
                 <NavLink 

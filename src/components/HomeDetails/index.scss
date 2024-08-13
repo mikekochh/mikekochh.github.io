@@ -19,6 +19,14 @@
     padding: 50px 0; /* Adjust padding to ensure text is not cut off */
 }
 
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .home {
+        background-size: cover; /* Stretch to cover entire area */
+        background-position: center; /* Center the image */
+    }
+}
+
 .main-title {
     font-size: 3rem; /* Huge title size */
     font-weight: bold;
@@ -30,6 +38,13 @@
     margin: 0 auto 30px auto;
     color: black;
     width: 66.6%;
+    text-align: center;
+}
+
+.subheader-mobile {
+    margin: 0 auto 30px auto;
+    color: black;
+    width: 90%;
     text-align: center;
 }
 
@@ -62,11 +77,6 @@
         margin-right: 10px;
         object-fit: cover;
     }
-
-    .response-text {
-        font-size: 1rem;
-        color: black; /* Set text to black for contrast */
-    }
 }
 
 .golden-ratio-0 {
@@ -75,6 +85,10 @@
 
 .golden-ratio-1 {
     font-size: 15px;
+}
+
+.golden-ratio-15 {
+    font-size: 20px;
 }
 
 .golden-ratio-2 {
