@@ -5,7 +5,7 @@ import DreamOraclesLandingPageVideo from "../../assets/videos/DreamOraclesLandin
 import MyWallflowerVideo from "../../assets/videos/MywallflowerDemo.mp4";
 import Resume from '../../assets/resume/Michael-Koch-Resume.pdf';
 import './index.scss'
-import { FreelanceDetails, JPMorganDetails, CCLRDetails, MaxetaDetails } from './CompanyDetails';
+import { MannyDetails, FreelanceDetails, JPMorganDetails, CCLRDetails, MaxetaDetails } from './CompanyDetails';
 import VideoPlayer from '../VideoPlayer';
 
 const JobDetails = ({companyName, timeFrame, companyID, companyURL, isMobile}) => {
@@ -13,12 +13,14 @@ const JobDetails = ({companyName, timeFrame, companyID, companyURL, isMobile}) =
     const companyDetail = (companyID) => {
         switch(companyID) {
             case 1:
-                return <FreelanceDetails />;
+                return <MannyDetails />;
             case 2:
-                return <JPMorganDetails />;
+                return <FreelanceDetails />;
             case 3:
-                return <CCLRDetails />;
+                return <JPMorganDetails />;
             case 4:
+                return <CCLRDetails />;
+            case 5:
                 return <MaxetaDetails />;
             default:
                 return <div></div>;
@@ -177,9 +179,17 @@ const AboutDetails = ({ handleIconClick, isMobile }) => {
                 <div className="work-experience-section md:space-y-0 space-y-8 mt-8">
                     <div className="md:p-6 pl-6 pr-6 p-0">
                         <JobDetails 
+                            companyName="Manny | Software Developer" 
+                            timeFrame="June 2024 - Present" 
+                            companyID={1} 
+                            isMobile={isMobile}    
+                        />
+                    </div>
+                    <div className="md:p-6 pl-6 pr-6 p-0">
+                        <JobDetails 
                             companyName="Freelance (Self-Employed) | Software Developer" 
                             timeFrame="March 2024 - Present" 
-                            companyID={1} 
+                            companyID={2} 
                             isMobile={isMobile}    
                         />
                     </div>
@@ -187,7 +197,7 @@ const AboutDetails = ({ handleIconClick, isMobile }) => {
                         <JobDetails 
                             companyName="JP Morgan & Chase | Software Engineer" 
                             timeFrame="March 2023 - March 2024" 
-                            companyID={2} 
+                            companyID={3} 
                             companyURL={"https://www.jpmorgan.com/global"} 
                             isMobile={isMobile}
                         />
@@ -196,7 +206,7 @@ const AboutDetails = ({ handleIconClick, isMobile }) => {
                         <JobDetails 
                             companyName="CCLR | Software Developer" 
                             timeFrame="May 2021 - March 2023" 
-                            companyID={3} 
+                            companyID={4} 
                             companyURL={"https://www.cclrinc.com/"} 
                             isMobile={isMobile}
                         />
@@ -205,7 +215,7 @@ const AboutDetails = ({ handleIconClick, isMobile }) => {
                         <JobDetails 
                             companyName="Maxeta Technologies | Web Development Intern" 
                             timeFrame="June 2020 - August 2020" 
-                            companyID={4} 
+                            companyID={5} 
                             companyURL={"https://www.maxetatech.com/"} 
                             isMobile={isMobile}
                         />

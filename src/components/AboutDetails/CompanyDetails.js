@@ -1,5 +1,23 @@
 import ExperienceCard from '../ExperienceCard';
 
+export const MannyDetails = () => {
+    return (
+        <div>
+            <p>• Sole developer responsible for building a full-stack real estate construction application from scratch using NextJS and Supabase, handling all aspects of frontend, backend, and database development</p>
+            <p>• Developing key features including profile creation, authentication, private messaging, project management, and an admin portal for high-level employees</p>
+            <p>• Designing and creating separate database environments for local, testing, and production</p>
+            <p>• Building tracking software to monitor marketing metrics such as views, clicks, new users, and other user metadata</p>
+            <p>• Collaborating closely with clients to understand business requirements, ensuring the application met their vision through weekly improvement demonstrations</p>
+            <div class="flex flex-wrap">
+                <ExperienceCard experience="NextJS" />
+                <ExperienceCard experience="Supabase" />
+                <ExperienceCard experience="Google APIs" />
+                <ExperienceCard experience="Tailwind CSS" />
+            </div>
+        </div>
+    )
+}
+
 export const FreelanceDetails = () => {
     return (
         <div>
