@@ -56,7 +56,7 @@ const Navbar = ({ handleIconClick, isMobile }) => {
         <div className='nav-bar'>
             <Link to='/' className='logo-container'>
                 <img className='logo' src={logo} alt='Logo' />
-                <p className='company-name hidden md:flex'>Michael Koch Solutions</p>
+                <p className='company-name hidden md:flex'>Michael Koch</p>
             </Link>
             {isMobile ? (
                 <div className='menu-icon' onClick={toggleMenu}>

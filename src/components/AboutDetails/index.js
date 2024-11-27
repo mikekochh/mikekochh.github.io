@@ -2,6 +2,7 @@ import PortfolioVideo from '../../assets/videos/PortfolioDemo.mp4';
 import EstateVideo from '../../assets/videos/Demo-Desktop-Estate.mp4';
 import DreamOraclesVideo from '../../assets/videos/DreamOraclesDemo.mp4'
 import DreamOraclesLandingPageVideo from "../../assets/videos/DreamOraclesLandingPageDemo.mp4";
+import PainGamesLandingPageVideo from "../../assets/videos/Demo-Pain-Games-LandingPage.mov";
 import MyWallflowerVideo from "../../assets/videos/MywallflowerDemo.mp4";
 import Resume from '../../assets/resume/Michael-Koch-Resume.pdf';
 import './index.scss'
@@ -67,11 +68,11 @@ const AboutDetails = ({ handleIconClick, isMobile }) => {
                             <h1 className="golden-ratio-3 font-bold ml-6 md:ml-0 md:pl-8">Landing Pages</h1>
                             {isMobile ? (
                                 <h2 className="golden-ratio-15 ml-6 mt-5 mb-5">
-                                    Creating web pages that facilitate business growth and get customers to take action
+                                    Designing web pages that facilitate business growth and get customers to take action
                                 </h2>
                             ) : (
                                 <h2 className="pl-8 golden-ratio-1 ml-0">
-                                    Creating web pages that facilitate business growth and get customers to take action
+                                    Designing web pages that facilitate business growth and get customers to take action
                                 </h2>
                             )}
                         </div>
@@ -83,8 +84,18 @@ const AboutDetails = ({ handleIconClick, isMobile }) => {
                             Start a project
                         </button>
                     </div>
-                    <div className="md:flex md:flex-wrap">    
+                    <div className="md:flex md:flex-wrap">   
                         <div className="md:w-1/2 md:p-8 md:pl-0 p-6">
+                            <VideoPlayer 
+                                websiteLink="https://www.thepaingames.com/"
+                                videoTitle="Pain Games" 
+                                videoSubtitle="A web page focused on getting people to download Pain Games app"
+                                video={PainGamesLandingPageVideo}  
+                                githubLink={"https://github.com/mikekochh/Pain-Games-Web"}
+                                languages={["NextJS 14", "Tailwind CSS", "Supabase", "React", "JavaScript"]} 
+                            />
+                        </div>
+                        <div className="md:w-1/2 md:p-8 md:pr-0 p-6">
                             <VideoPlayer 
                                 websiteLink="https://www.dreamoracles.co"
                                 videoTitle="Dream Oracles" 
@@ -94,7 +105,7 @@ const AboutDetails = ({ handleIconClick, isMobile }) => {
                                 languages={["NextJS 14", "Tailwind CSS", "MongoDB", "LLMs", "React", "JavaScript"]} 
                             />
                         </div>         
-                        <div className="md:w-1/2 md:p-8 md:pr-0 p-6">
+                        <div className="md:w-1/2 md:p-8 md:pl-0 p-6">
                             <VideoPlayer 
                                 videoTitle="MyWallflower" 
                                 videoSubtitle="A landing page that is focused on getting new customers to shop now." 
@@ -102,7 +113,7 @@ const AboutDetails = ({ handleIconClick, isMobile }) => {
                                 languages={["Weebly", "Sqaurespace"]}
                             />
                         </div>
-                        <div className="md:w-1/2 md:p-8 md:pl-0 p-6">
+                        <div className="md:w-1/2 md:p-8 md:pr-0 p-6">
                             <VideoPlayer 
                                 videoTitle="Portfolio Site" 
                                 videoSubtitle="Website for displaying experience, skillset, and projects that I have worked in my career." 
