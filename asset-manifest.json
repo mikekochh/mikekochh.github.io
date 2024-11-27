@@ -1,9 +1,10 @@
 {
   "files": {
     "main.css": "/static/css/main.6447c814.css",
-    "main.js": "/static/js/main.2be36cca.js",
+    "main.js": "/static/js/main.6b298a5c.js",
     "static/js/787.cf482a7c.chunk.js": "/static/js/787.cf482a7c.chunk.js",
     "static/media/Demo-Desktop-Estate.mp4": "/static/media/Demo-Desktop-Estate.b47f7ab3008d0315a685.mp4",
+    "static/media/Demo-Pain-Games-LandingPage.mov": "/static/media/Demo-Pain-Games-LandingPage.8e4565ed3a955c8f2150.mov",
     "static/media/MywallflowerDemo.mp4": "/static/media/MywallflowerDemo.30b5cbbca20fcbe3fa78.mp4",
     "static/media/DreamOraclesDemo.mp4": "/static/media/DreamOraclesDemo.b00d7f2dbfe8829a7650.mp4",
     "static/media/PortfolioDemo.mp4": "/static/media/PortfolioDemo.e7747fdb21a1a02b8574.mp4",
@@ -17,11 +18,11 @@
     "static/media/LaBelleAurore.woff2": "/static/media/LaBelleAurore.31d6cfe0d16ae931b73c.woff2",
     "static/media/helvetica-neu.ttf": "/static/media/helvetica-neu.31d6cfe0d16ae931b73c.ttf",
     "main.6447c814.css.map": "/static/css/main.6447c814.css.map",
-    "main.2be36cca.js.map": "/static/js/main.2be36cca.js.map",
+    "main.6b298a5c.js.map": "/static/js/main.6b298a5c.js.map",
     "787.cf482a7c.chunk.js.map": "/static/js/787.cf482a7c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6447c814.css",
-    "static/js/main.2be36cca.js"
+    "static/js/main.6b298a5c.js"
   ]
 }
