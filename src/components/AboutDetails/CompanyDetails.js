@@ -21,26 +21,23 @@ export const MannyDetails = () => {
 export const FreelanceDetails = () => {
     return (
         <div>
-            <p>• Creating landing pages for clients to help with their online business growth and converting potential customers into paying customers</p>
-            <p>• Developing a cross-platform music industry app using react native, enabling artists to share and sell their music and merchandise directly to their fans<br/></p>
-            <p>• Working in a startup-like environment, taking on responsibilities beyond development, including deciding on new features and company direction<br/></p>
-            <p>• Engaging in a fast-paced collaboration with the design team to ensure a solid and conhesive product<br/></p>
-            <p>• Acting as the primary developer of a dream interpretation website and being responsible for shipping new features directly to users</p>
-            <p>• Designed and developed a seamless, intuitive user interface for effortless navigation and interaction</p>
-            <p>• Architected a secure database from the ground up to safely store user profiles and information</p>
+            <p>• Leading as the sole developer on multiple large-scale projects, I delivered customer-first products that drove revenue by managing UX design, backend functionality, frontend development, and database architecture.</p>
+            <p>• Achieving user satisfaction and aligning with client business goals by integrating design principles, strategic product development, industry best coding practices, and maintaining clear communication and collaboration with clients and users to deliver impactful solutions.</p>
+            <p>• Creating a cross-platform React Native app for the music industry, empowering artists to share and sell their music and merchandise directly to fans.</p>
+            <p>• Designing and building multiple high-converting landing pages that clearly communicate a business&apos;s purpose and drive user engagement.</p>
             <div class="flex flex-wrap">
-                <ExperienceCard experience="React Native" />
                 <ExperienceCard experience="NextJS" />
                 <ExperienceCard experience="LLMs" />
                 <ExperienceCard experience="TypeScript" />
                 <ExperienceCard experience="APIs" />
                 <ExperienceCard experience="MongoDB" />
+                <ExperienceCard experience="Supabase" />
+                <ExperienceCard experience="Node.js" />
                 <ExperienceCard experience="React" />
+                <ExperienceCard experience="React Native" />
                 <ExperienceCard experience="iOS App" />
                 <ExperienceCard experience="AI" />
                 <ExperienceCard experience="Tailwind CSS" />
-                <ExperienceCard experience="Sqaurespace" />
-                <ExperienceCard experience="Weebly" />
             </div>
         </div>
     )

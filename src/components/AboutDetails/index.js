@@ -1,10 +1,11 @@
 import PortfolioVideo from '../../assets/videos/PortfolioDemo.mp4';
+import SnorkelVideo from '../../assets/videos/Snorkel-Landing-Page.mov';
 import EstateVideo from '../../assets/videos/Demo-Desktop-Estate.mp4';
-import DreamOraclesVideo from '../../assets/videos/DreamOraclesDemo.mp4'
-import DreamOraclesLandingPageVideo from "../../assets/videos/DreamOraclesLandingPageDemo.mp4";
+import DreamOraclesVideo from '../../assets/videos/Dream-Oracles-Demo.mov'
+import DreamOraclesLandingPageVideo from "../../assets/videos/Dream-Oracles-Landing-Page.mov";
 import PainGamesLandingPageVideo from "../../assets/videos/Demo-Pain-Games-LandingPage.mov";
 import MyWallflowerVideo from "../../assets/videos/MywallflowerDemo.mp4";
-import Resume from '../../assets/resume/Michael-Koch-Resume.pdf';
+import Resume from '../../assets/resume/Resume-Software-Developer.pdf';
 import './index.scss'
 import { MannyDetails, FreelanceDetails, JPMorganDetails, CCLRDetails, MaxetaDetails } from './CompanyDetails';
 import VideoPlayer from '../VideoPlayer';
@@ -61,6 +62,77 @@ const JobDetails = ({companyName, timeFrame, companyID, companyURL, isMobile}) =
 const AboutDetails = ({ handleIconClick, isMobile }) => {
     return (
         <div className="about">
+            <div className="md:w-2/3 md:mx-auto">
+                <div className={`flex items-center justify-between mt-20 ${isMobile ? 'flex-col' : ''}`}>
+                    <div>
+                        <h1 className="golden-ratio-3 font-bold ml-6 md:ml-0 md:pl-8">Professional Experience</h1>
+                        {isMobile ? (
+                            <h2 className="golden-ratio-15 ml-6 mt-5 mb-5">Leveraging my expertise to drive company growth and create cutting-edge digital products</h2>
+                        ) : (
+                            <h2 className="pl-8 golden-ratio-1 ml-0">Leveraging my expertise to drive company growth and create cutting-edge digital products</h2>
+                        )}
+                    </div>
+                    <button 
+                        className={`bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded shadow-lg golden-ratio-1 whitespace-nowrap ${
+                        isMobile ? 'mt-4 self-start mb-4 ml-8' : 'ml-4'}`}
+                        onClick={handleIconClick('contact')}
+                    >
+                        Hire Me
+                    </button>
+                </div>
+                <div className="work-experience-section md:space-y-0 space-y-8 mt-8">
+                    {/* <div className="md:p-6 pl-6 pr-6 p-0">
+                        <JobDetails 
+                            companyName="Manny | Software Developer" 
+                            timeFrame="June 2024 - Present" 
+                            companyID={1} 
+                            isMobile={isMobile}    
+                        />
+                    </div> */}
+                    <div className="md:p-6 pl-6 pr-6 p-0">
+                        <JobDetails 
+                            companyName="Freelance (Self-Employed) | Software Developer" 
+                            timeFrame="November 2023 - Present" 
+                            companyID={2} 
+                            isMobile={isMobile}    
+                        />
+                    </div>
+                    <div className="md:p-6 pl-6 pr-6 p-0">
+                        <JobDetails 
+                            companyName="JP Morgan & Chase | Software Engineer" 
+                            timeFrame="March 2023 - March 2024" 
+                            companyID={3} 
+                            companyURL={"https://www.jpmorgan.com/global"} 
+                            isMobile={isMobile}
+                        />
+                    </div>
+                    <div className="md:p-6 pl-6 pr-6 p-0">
+                        <JobDetails 
+                            companyName="CCLR | Software Developer" 
+                            timeFrame="May 2021 - March 2023" 
+                            companyID={4} 
+                            companyURL={"https://www.cclrinc.com/"} 
+                            isMobile={isMobile}
+                        />
+                    </div>
+                    <div className="md:p-6 pl-6 pr-6 p-0">
+                        <JobDetails 
+                            companyName="Maxeta Technologies | Web Development Intern" 
+                            timeFrame="June 2020 - August 2020" 
+                            companyID={5} 
+                            companyURL={"https://www.maxetatech.com/"} 
+                            isMobile={isMobile}
+                        />
+                    </div>
+                </div>
+            </div>
+            <div className="text-center mt-10">
+                <a href={Resume} download="Michael-Koch-Resume">
+                    <button className="bg-gray-400 hover:bg-gray-500 text-white font-bold py-2 px-4 rounded-lg text-15">
+                        Download Full Resume (PDF)
+                    </button>
+                </a>
+            </div>
             <div className="md:w-2/3 md:mx-auto mt-20">
                 <div className="business-projects-section">
                     <div className={`flex items-center justify-between ${isMobile ? 'flex-col' : ''}`}>
@@ -84,7 +156,27 @@ const AboutDetails = ({ handleIconClick, isMobile }) => {
                             Start a project
                         </button>
                     </div>
-                    <div className="md:flex md:flex-wrap">   
+                    <div className="md:flex md:flex-wrap">  
+                        <div className="md:w-1/2 md:p-8 md:pl-0 p-6">
+                            <VideoPlayer 
+                                websiteLink="https://www.dreamoracles.co"
+                                videoTitle="Dream Oracles" 
+                                videoSubtitle="A landing page designed to introduce Dream Oracles interpretation services and inspire visitors to give them a try."
+                                video={DreamOraclesLandingPageVideo}  
+                                githubLink={"https://github.com/mikekochh/Dream-Interpretation"}
+                                languages={["NextJS 14", "Tailwind CSS", "MongoDB", "LLMs", "React", "JavaScript"]} 
+                            />
+                        </div>  
+                        <div className="md:w-1/2 md:p-8 md:pr-0 p-6">
+                            <VideoPlayer 
+                                websiteLink="https://www.snorkel-usa.com/"
+                                videoTitle="Snorkel" 
+                                videoSubtitle="A landing page designed to inform visitors about Snorkel and drive customer purchases"
+                                video={SnorkelVideo}  
+                                githubLink={"https://github.com/mikekochh/Pain-Games-Web"}
+                                languages={["NextJS 14", "Tailwind CSS", "Supabase", "React", "JavaScript"]} 
+                            />
+                        </div> 
                         <div className="md:w-1/2 md:p-8 md:pl-0 p-6">
                             <VideoPlayer 
                                 websiteLink="https://www.thepaingames.com/"
@@ -94,18 +186,8 @@ const AboutDetails = ({ handleIconClick, isMobile }) => {
                                 githubLink={"https://github.com/mikekochh/Pain-Games-Web"}
                                 languages={["NextJS 14", "Tailwind CSS", "Supabase", "React", "JavaScript"]} 
                             />
-                        </div>
+                        </div>       
                         <div className="md:w-1/2 md:p-8 md:pr-0 p-6">
-                            <VideoPlayer 
-                                websiteLink="https://www.dreamoracles.co"
-                                videoTitle="Dream Oracles" 
-                                videoSubtitle="A web page focused on getting people to create a dream oracles account"
-                                video={DreamOraclesLandingPageVideo}  
-                                githubLink={"https://github.com/mikekochh/Dream-Interpretation"}
-                                languages={["NextJS 14", "Tailwind CSS", "MongoDB", "LLMs", "React", "JavaScript"]} 
-                            />
-                        </div>         
-                        <div className="md:w-1/2 md:p-8 md:pl-0 p-6">
                             <VideoPlayer 
                                 videoTitle="MyWallflower" 
                                 videoSubtitle="A landing page that is focused on getting new customers to shop now." 
@@ -113,10 +195,10 @@ const AboutDetails = ({ handleIconClick, isMobile }) => {
                                 languages={["Weebly", "Sqaurespace"]}
                             />
                         </div>
-                        <div className="md:w-1/2 md:p-8 md:pr-0 p-6">
+                        <div className="md:w-1/2 md:p-8 md:pl-0 p-6">
                             <VideoPlayer 
                                 videoTitle="Portfolio Site" 
-                                videoSubtitle="Website for displaying experience, skillset, and projects that I have worked in my career." 
+                                videoSubtitle="Website for displaying experience, skillset, and projects that I have worked on in my career." 
                                 video={PortfolioVideo}
                                 githubLink="https://github.com/mikekochh/react-portfolio"
                                 languages={["React", "Tailwind CSS", "JavaScript"]}    
@@ -168,77 +250,6 @@ const AboutDetails = ({ handleIconClick, isMobile }) => {
                         </div>
                     </div>
                 </div>
-                <div className={`flex items-center justify-between mt-20 ${isMobile ? 'flex-col' : ''}`}>
-                    <div>
-                        <h1 className="golden-ratio-3 font-bold ml-6 md:ml-0 md:pl-8">Professional Experience</h1>
-                        {isMobile ? (
-                            <h2 className="golden-ratio-15 ml-6 mt-5 mb-5">Leveraging my expertise to drive company growth and create cutting-edge digital products</h2>
-                        ) : (
-                            <h2 className="pl-8 golden-ratio-1 ml-0">Leveraging my expertise to drive company growth and create cutting-edge digital products</h2>
-                        )}
-                    </div>
-                    <button 
-                        className={`bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded shadow-lg golden-ratio-1 whitespace-nowrap ${
-                        isMobile ? 'mt-4 self-start mb-4 ml-8' : 'ml-4'}`}
-                        onClick={handleIconClick('contact')}
-                    >
-                        Hire Me
-                    </button>
-                </div>
-            </div>
-            <div className="md:w-2/3 md:mx-auto">
-                <div className="work-experience-section md:space-y-0 space-y-8 mt-8">
-                    <div className="md:p-6 pl-6 pr-6 p-0">
-                        <JobDetails 
-                            companyName="Manny | Software Developer" 
-                            timeFrame="June 2024 - Present" 
-                            companyID={1} 
-                            isMobile={isMobile}    
-                        />
-                    </div>
-                    <div className="md:p-6 pl-6 pr-6 p-0">
-                        <JobDetails 
-                            companyName="Freelance (Self-Employed) | Software Developer" 
-                            timeFrame="March 2024 - Present" 
-                            companyID={2} 
-                            isMobile={isMobile}    
-                        />
-                    </div>
-                    <div className="md:p-6 pl-6 pr-6 p-0">
-                        <JobDetails 
-                            companyName="JP Morgan & Chase | Software Engineer" 
-                            timeFrame="March 2023 - March 2024" 
-                            companyID={3} 
-                            companyURL={"https://www.jpmorgan.com/global"} 
-                            isMobile={isMobile}
-                        />
-                    </div>
-                    <div className="md:p-6 pl-6 pr-6 p-0">
-                        <JobDetails 
-                            companyName="CCLR | Software Developer" 
-                            timeFrame="May 2021 - March 2023" 
-                            companyID={4} 
-                            companyURL={"https://www.cclrinc.com/"} 
-                            isMobile={isMobile}
-                        />
-                    </div>
-                    <div className="md:p-6 pl-6 pr-6 p-0">
-                        <JobDetails 
-                            companyName="Maxeta Technologies | Web Development Intern" 
-                            timeFrame="June 2020 - August 2020" 
-                            companyID={5} 
-                            companyURL={"https://www.maxetatech.com/"} 
-                            isMobile={isMobile}
-                        />
-                    </div>
-                </div>
-            </div>
-            <div className="text-center mt-10">
-                <a href={Resume} download="Michael-Koch-Resume">
-                    <button className="bg-gray-400 hover:bg-gray-500 text-white font-bold py-2 px-4 rounded-lg text-15">
-                        Download Full Resume (PDF)
-                    </button>
-                </a>
             </div>
         </div>
     )
