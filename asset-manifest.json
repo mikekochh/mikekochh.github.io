@@ -1,28 +1,29 @@
 {
   "files": {
-    "main.css": "/static/css/main.6447c814.css",
-    "main.js": "/static/js/main.6b298a5c.js",
+    "main.css": "/static/css/main.7700aa31.css",
+    "main.js": "/static/js/main.e4261d05.js",
     "static/js/787.cf482a7c.chunk.js": "/static/js/787.cf482a7c.chunk.js",
+    "static/media/Dream-Oracles-Landing-Page.mov": "/static/media/Dream-Oracles-Landing-Page.dcaac8300e598644607c.mov",
     "static/media/Demo-Desktop-Estate.mp4": "/static/media/Demo-Desktop-Estate.b47f7ab3008d0315a685.mp4",
     "static/media/Demo-Pain-Games-LandingPage.mov": "/static/media/Demo-Pain-Games-LandingPage.8e4565ed3a955c8f2150.mov",
     "static/media/MywallflowerDemo.mp4": "/static/media/MywallflowerDemo.30b5cbbca20fcbe3fa78.mp4",
-    "static/media/DreamOraclesDemo.mp4": "/static/media/DreamOraclesDemo.b00d7f2dbfe8829a7650.mp4",
+    "static/media/Dream-Oracles-Demo.mov": "/static/media/Dream-Oracles-Demo.ce8a291afbd5c675def0.mov",
+    "static/media/Snorkel-Landing-Page.mov": "/static/media/Snorkel-Landing-Page.1e95e4bb360c06576048.mov",
     "static/media/PortfolioDemo.mp4": "/static/media/PortfolioDemo.e7747fdb21a1a02b8574.mp4",
-    "static/media/DreamOraclesLandingPageDemo.mp4": "/static/media/DreamOraclesLandingPageDemo.ef9c760431d4c6b4522b.mp4",
     "static/media/banner.png": "/static/media/banner.48df2ad5fb05e6715583.png",
+    "static/media/Resume-Software-Developer.pdf": "/static/media/Resume-Software-Developer.d95dcc8c7833d46e37bc.pdf",
     "static/media/handsomeMan.jpg": "/static/media/handsomeMan.4678fdac3bd70ee02c29.jpg",
-    "static/media/Michael-Koch-Resume.pdf": "/static/media/Michael-Koch-Resume.ea5d032ddd72b7a7da5c.pdf",
     "static/media/blackLogo.jpg": "/static/media/blackLogo.f5d4cb684b6965c2348a.jpg",
     "index.html": "/index.html",
     "static/media/CoolveticaRg-Regular.woff2": "/static/media/CoolveticaRg-Regular.31d6cfe0d16ae931b73c.woff2",
     "static/media/LaBelleAurore.woff2": "/static/media/LaBelleAurore.31d6cfe0d16ae931b73c.woff2",
     "static/media/helvetica-neu.ttf": "/static/media/helvetica-neu.31d6cfe0d16ae931b73c.ttf",
-    "main.6447c814.css.map": "/static/css/main.6447c814.css.map",
-    "main.6b298a5c.js.map": "/static/js/main.6b298a5c.js.map",
+    "main.7700aa31.css.map": "/static/css/main.7700aa31.css.map",
+    "main.e4261d05.js.map": "/static/js/main.e4261d05.js.map",
     "787.cf482a7c.chunk.js.map": "/static/js/787.cf482a7c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6447c814.css",
-    "static/js/main.6b298a5c.js"
+    "static/css/main.7700aa31.css",
+    "static/js/main.e4261d05.js"
   ]
 }
