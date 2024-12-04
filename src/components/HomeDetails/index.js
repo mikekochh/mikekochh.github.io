@@ -11,11 +11,11 @@ const HomeDetails = ({ handleIconClick, isMobile }) => {
                 <h1 className="main-title golden-ratio-3">Software Development Done Right</h1>
                 {!isMobile ? (
                     <p className="subheader golden-ratio-2">
-                        Leveraging software solutions to drive business growth and transform your ideas into high-quality digital products.
+                        Exceeding expectations by delivering high-quality tech products and helping businesses achieve their goals.
                     </p>
                 ) : (
                     <p className="subheader-mobile golden-ratio-15">
-                        Leveraging software solutions to drive business growth and transform your ideas into high-quality digital products.
+                        Exceeding expectations by delivering high-quality tech products and helping businesses achieve their goals.
                     </p>
                 )}
                 <button 
