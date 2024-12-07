@@ -1,3 +1,4 @@
+push any changes to git hub
 use "npm run deploy" to update website
 then under project in github -> settings -> pages -> update custom domain to be www.michaelgkoch.com
 wait around 10 minutes for changes to appear
