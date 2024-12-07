@@ -134,6 +134,50 @@ const AboutDetails = ({ handleIconClick, isMobile }) => {
                 </a>
             </div>
             <div className="md:w-2/3 md:mx-auto mt-20">
+                <div className="digital-products-section mt-20">
+                    <div className={`flex items-center justify-between ${isMobile ? 'flex-col' : ''}`}>
+                        <div>
+                            <h1 className="golden-ratio-3 font-bold ml-6 md:ml-0 md:pl-8">Digital Products</h1>
+                            {isMobile ? (
+                                <h2 className="golden-ratio-15 ml-6 mt-5 mb-5">
+                                    Check out some of the projects and products that I have shipped
+                                </h2>
+                            ) : (
+                                <h2 className="pl-8 golden-ratio-1 ml-0">
+                                    Check out some of the projects and products that I have shipped
+                                </h2>
+                            )}
+                        </div>
+                        <button
+                            className={`bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded shadow-lg golden-ratio-1 whitespace-nowrap ${
+                            isMobile ? 'mt-4 self-start mb-4 ml-8' : 'ml-4'}`}
+                            onClick={handleIconClick('contact')}
+                        >
+                            Start a project
+                        </button>
+                    </div>
+                    <div className="md:flex md:flex-wrap">    
+                        <div className="md:w-1/2 md:p-8 md:pl-0 p-6">
+                            <VideoPlayer 
+                                websiteLink="https://www.dreamoracles.co"
+                                videoTitle="Dream Oracles" 
+                                videoSubtitle="Website for journaling user's dreams and interpreting them using diverse AI models."
+                                video={DreamOraclesVideo}  
+                                githubLink={"https://github.com/mikekochh/Dream-Interpretation"}
+                                languages={["NextJS 14", "Tailwind CSS", "MongoDB", "LLMs", "React", "AI", "APIs"]} 
+                            />
+                        </div>
+                        <div className="md:w-1/2 md:p-8 md:pr-0 p-6">
+                            <VideoPlayer 
+                                videoTitle="NFT Real Estate Application" 
+                                videoSubtitle="Real Estate application where each property is digitized on a blockchain and is able to be bought and sold." 
+                                video={EstateVideo}
+                                githubLink="https://github.com/mikekochh/NFT_Marketplace"
+                                languages={["NextJS", "Solidity", "Hardhat", "Ethereum", "TailwindCSS"]}    
+                            />
+                        </div>
+                    </div>
+                </div>
                 <div className="business-projects-section">
                     <div className={`flex items-center justify-between ${isMobile ? 'flex-col' : ''}`}>
                         <div>
@@ -202,50 +246,6 @@ const AboutDetails = ({ handleIconClick, isMobile }) => {
                                 video={PortfolioVideo}
                                 githubLink="https://github.com/mikekochh/react-portfolio"
                                 languages={["React", "Tailwind CSS", "JavaScript"]}    
-                            />
-                        </div>
-                    </div>
-                </div>
-                <div className="digital-products-section mt-20">
-                    <div className={`flex items-center justify-between ${isMobile ? 'flex-col' : ''}`}>
-                        <div>
-                            <h1 className="golden-ratio-3 font-bold ml-6 md:ml-0 md:pl-8">Digital Products</h1>
-                            {isMobile ? (
-                                <h2 className="golden-ratio-15 ml-6 mt-5 mb-5">
-                                    Turn your idea into a beautifully designed digital product that delivers an amazing user experience
-                                </h2>
-                            ) : (
-                                <h2 className="pl-8 golden-ratio-1 ml-0">
-                                    Turn your idea into a beautifully designed digital product that delivers an amazing user experience
-                                </h2>
-                            )}
-                        </div>
-                        <button
-                            className={`bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded shadow-lg golden-ratio-1 whitespace-nowrap ${
-                            isMobile ? 'mt-4 self-start mb-4 ml-8' : 'ml-4'}`}
-                            onClick={handleIconClick('contact')}
-                        >
-                            Start a project
-                        </button>
-                    </div>
-                    <div className="md:flex md:flex-wrap">    
-                        <div className="md:w-1/2 md:p-8 md:pl-0 p-6">
-                            <VideoPlayer 
-                                websiteLink="https://www.dreamoracles.co"
-                                videoTitle="Dream Oracles" 
-                                videoSubtitle="Website for journaling user's dreams and interpreting them using diverse AI models."
-                                video={DreamOraclesVideo}  
-                                githubLink={"https://github.com/mikekochh/Dream-Interpretation"}
-                                languages={["NextJS 14", "Tailwind CSS", "MongoDB", "LLMs", "React"]} 
-                            />
-                        </div>
-                        <div className="md:w-1/2 md:p-8 md:pr-0 p-6">
-                            <VideoPlayer 
-                                videoTitle="NFT Real Estate Application" 
-                                videoSubtitle="Real Estate application where each property is digitized on a blockchain and is able to be bought and sold." 
-                                video={EstateVideo}
-                                githubLink="https://github.com/mikekochh/NFT_Marketplace"
-                                languages={["NextJS", "Solidity", "Hardhat", "Ethereum", "TailwindCSS"]}    
                             />
                         </div>
                     </div>
