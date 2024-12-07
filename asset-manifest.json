@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.7700aa31.css",
-    "main.js": "/static/js/main.e4261d05.js",
+    "main.js": "/static/js/main.dac8634b.js",
     "static/js/787.cf482a7c.chunk.js": "/static/js/787.cf482a7c.chunk.js",
     "static/media/Dream-Oracles-Landing-Page.mov": "/static/media/Dream-Oracles-Landing-Page.dcaac8300e598644607c.mov",
     "static/media/Demo-Desktop-Estate.mp4": "/static/media/Demo-Desktop-Estate.b47f7ab3008d0315a685.mp4",
@@ -19,11 +19,11 @@
     "static/media/LaBelleAurore.woff2": "/static/media/LaBelleAurore.31d6cfe0d16ae931b73c.woff2",
     "static/media/helvetica-neu.ttf": "/static/media/helvetica-neu.31d6cfe0d16ae931b73c.ttf",
     "main.7700aa31.css.map": "/static/css/main.7700aa31.css.map",
-    "main.e4261d05.js.map": "/static/js/main.e4261d05.js.map",
+    "main.dac8634b.js.map": "/static/js/main.dac8634b.js.map",
     "787.cf482a7c.chunk.js.map": "/static/js/787.cf482a7c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7700aa31.css",
-    "static/js/main.e4261d05.js"
+    "static/js/main.dac8634b.js"
   ]
 }
