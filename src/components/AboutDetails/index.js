@@ -164,7 +164,8 @@ const AboutDetails = ({ handleIconClick, isMobile }) => {
                                 videoSubtitle="Website for journaling user's dreams and interpreting them using diverse AI models."
                                 video={DreamOraclesVideo}  
                                 githubLink={"https://github.com/mikekochh/Dream-Interpretation"}
-                                languages={["NextJS 14", "Tailwind CSS", "MongoDB", "LLMs", "React", "AI", "APIs"]} 
+                                languages={["NextJS", "Tailwind CSS", "MongoDB", "AI (LLMs)", "React", "Git", "APIs", "JavaScript"]} 
+                                dreamOracles={true}
                             />
                         </div>
                         <div className="md:w-1/2 md:p-8 md:pr-0 p-6">

@@ -22,12 +22,8 @@ const HomeDetails = ({ handleIconClick, isMobile }) => {
                     className="get-started-button"
                     onClick={handleIconClick('contact')}
                 >
-                    Get started
+                    Contact Me
                 </button>
-                <div className="response-time">
-                    <img src={handsomeMan} alt="Michael Koch" className="profile-pic" />
-                    <p className="golden-ratio-1">Response time: 1-2 days</p>
-                </div>
             </div>
         </div>
     );

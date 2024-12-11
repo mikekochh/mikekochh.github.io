@@ -1,6 +1,6 @@
 import ExperienceCard from "../ExperienceCard";
 
-const VideoCard = ({ video, videoTitle, videoSubtitle, githubLink, languages, websiteLink }) => {
+const VideoCard = ({ video, videoTitle, videoSubtitle, githubLink, languages, websiteLink, dreamOracles = false }) => {
     return (
         <div className="rounded-xl border border-gray-200 p-3 shadow-lg job-details relative">
             <a href={websiteLink} target="_blank" rel="noreferrer">
@@ -22,6 +22,12 @@ const VideoCard = ({ video, videoTitle, videoSubtitle, githubLink, languages, we
                 <div className="p-3">
                     <h1 className="golden-ratio-2 font-bold">{videoTitle}</h1>
                     <h2 className="golden-ratio-1">{videoSubtitle}</h2>
+                    {dreamOracles && (
+                        <ul>
+                            <li><strong>150+ users</strong></li>
+                            <li><strong>1000+ dreams logged</strong></li>
+                        </ul>
+                    )}
                     <br />
 
                     <div className="flex flex-wrap flex-row mt-3">
