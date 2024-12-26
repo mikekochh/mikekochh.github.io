@@ -1,8 +1,10 @@
 import PortfolioVideo from '../../assets/videos/PortfolioDemo.mp4';
 import SnorkelVideo from '../../assets/videos/Snorkel-Landing-Page.mov';
 import EstateVideo from '../../assets/videos/Demo-Desktop-Estate.mp4';
-import DreamOraclesVideo from '../../assets/videos/Dream-Oracles-Demo.mov'
+import DreamOraclesVideo from '../../assets/videos/Dream-Oracles-Demo.mov';
+import MannyVideo from '../../assets/videos/MannyProductVideo.mov';
 import DreamOraclesLandingPageVideo from "../../assets/videos/Dream-Oracles-Landing-Page.mov";
+import MannyLandingPageVideo from "../../assets/videos/MannyLandingPage.mov";
 import PainGamesLandingPageVideo from "../../assets/videos/Demo-Pain-Games-LandingPage.mov";
 import MyWallflowerVideo from "../../assets/videos/MywallflowerDemo.mp4";
 import Resume from '../../assets/resume/Resume-Software-Developer.pdf';
@@ -156,19 +158,29 @@ const AboutDetails = ({ handleIconClick, isMobile }) => {
                             Start a project
                         </button>
                     </div>
-                    <div className="md:flex md:flex-wrap">    
+                    <div className="md:flex md:flex-wrap"> 
                         <div className="md:w-1/2 md:p-8 md:pl-0 p-6">
+                            <VideoPlayer 
+                                websiteLink="https://www.mannybids.com/"
+                                videoTitle="Manny Bids" 
+                                videoSubtitle="Online marketplace connecting real estate contractors with project owners."
+                                video={MannyVideo}  
+                                languages={["NextJS", "Tailwind CSS", "Supabase", "REST APIs", "React", "Git", "JavaScript", "CSS", "Vercel"]} 
+                                manny={true}
+                            />
+                        </div>   
+                        <div className="md:w-1/2 md:p-8 md:pr-0 p-6">
                             <VideoPlayer 
                                 websiteLink="https://www.dreamoracles.co"
                                 videoTitle="Dream Oracles" 
                                 videoSubtitle="Website for journaling user's dreams and interpreting them using diverse AI models."
                                 video={DreamOraclesVideo}  
                                 githubLink={"https://github.com/mikekochh/Dream-Interpretation"}
-                                languages={["NextJS", "Tailwind CSS", "MongoDB", "AI (LLMs)", "React", "Git", "APIs", "JavaScript"]} 
+                                languages={["NextJS", "Tailwind CSS", "MongoDB", "AI (LLMs)", "React", "Git", "APIs", "JavaScript", "Firebase", "Vercel", "Python"]} 
                                 dreamOracles={true}
                             />
                         </div>
-                        <div className="md:w-1/2 md:p-8 md:pr-0 p-6">
+                        <div className="md:w-1/2 md:p-8 md:pl-0 p-6">
                             <VideoPlayer 
                                 videoTitle="NFT Real Estate Application" 
                                 videoSubtitle="Real Estate application where each property is digitized on a blockchain and is able to be bought and sold." 
@@ -204,6 +216,15 @@ const AboutDetails = ({ handleIconClick, isMobile }) => {
                     <div className="md:flex md:flex-wrap">  
                         <div className="md:w-1/2 md:p-8 md:pl-0 p-6">
                             <VideoPlayer 
+                                websiteLink="https://www.mannybids.com"
+                                videoTitle="Manny Bids" 
+                                videoSubtitle="A dual-landing page targeted towards real estate contractors and project owners."
+                                video={MannyLandingPageVideo}  
+                                languages={["NextJS 14", "Tailwind CSS", "Supabase", "React", "JavaScript"]} 
+                            />
+                        </div> 
+                        <div className="md:w-1/2 md:p-8 md:pr-0 p-6">
+                            <VideoPlayer 
                                 websiteLink="https://www.dreamoracles.co"
                                 videoTitle="Dream Oracles" 
                                 videoSubtitle="A landing page designed to introduce Dream Oracles interpretation services and inspire visitors to give them a try."
@@ -212,7 +233,7 @@ const AboutDetails = ({ handleIconClick, isMobile }) => {
                                 languages={["NextJS 14", "Tailwind CSS", "MongoDB", "LLMs", "React", "JavaScript"]} 
                             />
                         </div>  
-                        <div className="md:w-1/2 md:p-8 md:pr-0 p-6">
+                        <div className="md:w-1/2 md:p-8 md:pl-0 p-6">
                             <VideoPlayer 
                                 websiteLink="https://www.snorkel-usa.com/"
                                 videoTitle="Snorkel" 
@@ -222,7 +243,7 @@ const AboutDetails = ({ handleIconClick, isMobile }) => {
                                 languages={["NextJS 14", "Tailwind CSS", "Supabase", "React", "JavaScript"]} 
                             />
                         </div> 
-                        <div className="md:w-1/2 md:p-8 md:pl-0 p-6">
+                        <div className="md:w-1/2 md:p-8 md:pr-0 p-6">
                             <VideoPlayer 
                                 websiteLink="https://www.thepaingames.com/"
                                 videoTitle="Pain Games" 
@@ -232,7 +253,7 @@ const AboutDetails = ({ handleIconClick, isMobile }) => {
                                 languages={["NextJS 14", "Tailwind CSS", "Supabase", "React", "JavaScript"]} 
                             />
                         </div>       
-                        <div className="md:w-1/2 md:p-8 md:pr-0 p-6">
+                        <div className="md:w-1/2 md:p-8 md:pl-0 p-6">
                             <VideoPlayer 
                                 videoTitle="MyWallflower" 
                                 videoSubtitle="A landing page that is focused on getting new customers to shop now." 
@@ -240,7 +261,7 @@ const AboutDetails = ({ handleIconClick, isMobile }) => {
                                 languages={["Weebly", "Sqaurespace"]}
                             />
                         </div>
-                        <div className="md:w-1/2 md:p-8 md:pl-0 p-6">
+                        <div className="md:w-1/2 md:p-8 md:pr-0 p-6">
                             <VideoPlayer 
                                 videoTitle="Portfolio Site" 
                                 videoSubtitle="Website for displaying experience, skillset, and projects that I have worked on in my career." 

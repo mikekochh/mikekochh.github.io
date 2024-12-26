@@ -24,6 +24,10 @@ const HomeDetails = ({ handleIconClick, isMobile }) => {
                 >
                     Contact Me
                 </button>
+                <div className="response-time">
+                    <img src={handsomeMan} alt="Michael Koch" className="profile-pic" />
+                    <p className="golden-ratio-1">Expect a reply in 1-2 days</p>
+                </div>
             </div>
         </div>
     );
