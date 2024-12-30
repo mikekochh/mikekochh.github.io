@@ -1,14 +1,16 @@
 {
   "files": {
     "main.css": "/static/css/main.299c266d.css",
-    "main.js": "/static/js/main.75bc1967.js",
+    "main.js": "/static/js/main.18bed337.js",
     "static/js/787.cf482a7c.chunk.js": "/static/js/787.cf482a7c.chunk.js",
     "static/media/Dream-Oracles-Landing-Page.mov": "/static/media/Dream-Oracles-Landing-Page.dcaac8300e598644607c.mov",
     "static/media/Demo-Desktop-Estate.mp4": "/static/media/Demo-Desktop-Estate.b47f7ab3008d0315a685.mp4",
     "static/media/Demo-Pain-Games-LandingPage.mov": "/static/media/Demo-Pain-Games-LandingPage.8e4565ed3a955c8f2150.mov",
     "static/media/MywallflowerDemo.mp4": "/static/media/MywallflowerDemo.30b5cbbca20fcbe3fa78.mp4",
     "static/media/Dream-Oracles-Demo.mov": "/static/media/Dream-Oracles-Demo.ce8a291afbd5c675def0.mov",
+    "static/media/MannyLandingPage.mov": "/static/media/MannyLandingPage.a4d9667e8b4c8ba31561.mov",
     "static/media/Snorkel-Landing-Page.mov": "/static/media/Snorkel-Landing-Page.1e95e4bb360c06576048.mov",
+    "static/media/MannyProductVideo.mov": "/static/media/MannyProductVideo.a4fea98e9b86de1e005f.mov",
     "static/media/PortfolioDemo.mp4": "/static/media/PortfolioDemo.e7747fdb21a1a02b8574.mp4",
     "static/media/banner.png": "/static/media/banner.48df2ad5fb05e6715583.png",
     "static/media/Resume-Software-Developer.pdf": "/static/media/Resume-Software-Developer.d95dcc8c7833d46e37bc.pdf",
@@ -19,11 +21,11 @@
     "static/media/LaBelleAurore.woff2": "/static/media/LaBelleAurore.31d6cfe0d16ae931b73c.woff2",
     "static/media/helvetica-neu.ttf": "/static/media/helvetica-neu.31d6cfe0d16ae931b73c.ttf",
     "main.299c266d.css.map": "/static/css/main.299c266d.css.map",
-    "main.75bc1967.js.map": "/static/js/main.75bc1967.js.map",
+    "main.18bed337.js.map": "/static/js/main.18bed337.js.map",
     "787.cf482a7c.chunk.js.map": "/static/js/787.cf482a7c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.299c266d.css",
-    "static/js/main.75bc1967.js"
+    "static/js/main.18bed337.js"
   ]
 }
